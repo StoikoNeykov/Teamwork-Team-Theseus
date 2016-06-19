@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace TeseusMainGame
 {
-    static class Program
+    static class Setup
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace TeseusMainGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TeseusMainForm());
         }
     }
 }

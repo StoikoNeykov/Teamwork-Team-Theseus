@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TeseusMainGame
 {
-    public partial class Form1 : Form
+    public partial class TeseusMainForm : Form
     {
-        public Form1()
+        public TeseusMainForm()
         {
             InitializeComponent();
         }
