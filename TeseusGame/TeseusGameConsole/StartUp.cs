@@ -1,11 +1,10 @@
-﻿namespace TeseusGame
-{
-    using System;
-    using System.Windows.Forms;
-    using System.Linq;
-    using GameLogic;
-    using static GameLogic.TopScores;
+﻿using System.Linq;
+using GameLogic;
 
+namespace TeseusGame
+{
+     
+    using System;
     public static class StartUp
     {
         public static void Main()
@@ -15,27 +14,22 @@
 
         private static void TestTopScores()
         {
-            var result = TopScores.Show();
+            var result = TopScores.Show().ToList();
             result.ForEach(x=>
             {
-                if (x == null)
-                {
-                    throw new ArgumentNullException(nameof(x));
-                }
-
-                return Console.WriteLine(x);
+                Console.WriteLine(x);
             });
             PrintLine();
 
             TopScores.CheckScore("Pesho", 1000);
             TopScores.CheckScore("Ivan", 50);
             TopScores.CheckScore("Gosho", 3000);
-            result = TopScores.Show();
+            result = TopScores.Show().ToList();
             result.ForEach(x => Console.WriteLine(x));
             PrintLine();
 
             TopScores.Clear();
-            result = TopScores.Show();
+            result = TopScores.Show().ToList();
             result.ForEach(x => Console.WriteLine(x));
         }
 

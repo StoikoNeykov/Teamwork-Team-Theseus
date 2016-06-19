@@ -3,7 +3,7 @@
     using System.Windows.Forms;
 
     using GameLogic;
-
+   
     public partial class TopScores : Form
     {
         public TopScores()
