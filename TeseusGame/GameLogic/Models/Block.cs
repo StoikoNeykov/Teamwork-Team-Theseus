@@ -1,6 +1,8 @@
 ﻿namespace GameLogic.Models
 {
-    public class Block
+    using Interfaces;
+
+    public abstract class Block : IBlock
     {
         #region fields
 
@@ -113,6 +115,5 @@
 
         #endregion
     }
-
 
 }

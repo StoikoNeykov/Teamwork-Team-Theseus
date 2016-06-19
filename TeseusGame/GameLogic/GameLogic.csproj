@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IBlock.cs" />
+    <Compile Include="Interfaces\IFigure.cs" />
+    <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\Figures.cs" />
+    <Compile Include="Models\WallBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopScores.cs" />
   </ItemGroup>
