@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace TeseusMainGame
+﻿namespace TeseusMainGame
 {
+    using System;
+    using System.Windows.Forms;
+
+    using UserControls;
+
     public partial class TeseusMainForm : Form
     {
         public TeseusMainForm()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var topScores = new TopScores();
+            topScores.Show();
         }
     }
 }

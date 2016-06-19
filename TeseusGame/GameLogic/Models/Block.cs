@@ -25,7 +25,7 @@
             this.Height = height;
             this.Top = top;
             this.Left = left;
-            this.Shape = GetShape(shape);
+           // this.Shape = GetShape(shape);
         }
         #endregion
 
@@ -97,21 +97,21 @@
         //TODO add shapes in cases
         #region Private Methods
 
-        private bool[,] GetShape(short shape)
-        {
-            bool[,] result;
-            switch (shape)
-            {
-                case 1:
-                case 2:
-                case 3:
-
-                default:
-                    break;
-            }
-
-            return result;
-        }
+      // private bool[,] GetShape(short shape)
+      // {
+      //     bool[,] result;
+      //     switch (shape)
+      //     {
+      //         case 1:
+      //         case 2:
+      //         case 3:
+      //
+      //         default:
+      //             break;
+      //     }
+      //
+      //     return result;
+      // }
 
         #endregion
     }

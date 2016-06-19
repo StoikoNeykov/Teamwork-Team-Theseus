@@ -13,10 +13,11 @@ namespace GameLogic
 
         #region public
 
-        public static string Show()
+        public static string[] Show()
         {
             var scores = LoadCurentBest();
-            var builder = new StringBuilder();
+            // var builder = new StringBuilder();
+            var arr = new string[tops];
             string name = string.Empty;
             int value;
             var interval = 1;
@@ -24,16 +25,16 @@ namespace GameLogic
             {
                 if (i == 9 || i == 99)
                 {
-                    interval++;
+                    interval+=2;
                 }
                 var splited = scores[i]
                             .Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
                 name = splited[0];
                 value = int.Parse(splited[1]);
-                builder.AppendLine(string.Format("{0}. {1}  {2}", i + 1, name.PadRight(16 - interval, ' '), value.ToString().PadLeft(10, ' ')));
+                arr[i] = (string.Format("{0}. {1}  {2}", i + 1, name.PadRight(16 - interval, ' '), value.ToString().PadLeft(10, ' ')));
             }
 
-            return builder.ToString();
+            return arr;
         }
 
         public static void CheckScore(string name, int value)
