@@ -2,9 +2,9 @@
 {
     using System;
     using System.Windows.Forms;
-
+    using System.Linq;
     using GameLogic;
-    using GameLogic.Extensions;
+    using static GameLogic.TopScores;
 
     public static class StartUp
     {
@@ -16,7 +16,15 @@
         private static void TestTopScores()
         {
             var result = TopScores.Show();
-            result.ForEach(x=>Console.WriteLine(x));
+            result.ForEach(x=>
+            {
+                if (x == null)
+                {
+                    throw new ArgumentNullException(nameof(x));
+                }
+
+                return Console.WriteLine(x);
+            });
             PrintLine();
 
             TopScores.CheckScore("Pesho", 1000);

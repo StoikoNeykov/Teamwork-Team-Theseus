@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeseusGameConsole", "Teseus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeseusMainGame", "TeseusMainGame\TeseusMainGame.csproj", "{D123D7DB-AB37-4253-BE9E-8DCBEDB27C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "GameLogic\GameLogic.csproj", "{EF52CF11-102E-4E25-A94D-8DD417F90A43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "TopScore\GameLogic.csproj", "{EF52CF11-102E-4E25-A94D-8DD417F90A43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

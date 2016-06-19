@@ -36,20 +36,24 @@
             // 
             this.listBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 21;
-            this.listBox.Location = new System.Drawing.Point(63, 201);
+            this.listBox.ItemHeight = 28;
+            this.listBox.Location = new System.Drawing.Point(59, 232);
+            this.listBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(294, 277);
+            this.listBox.Size = new System.Drawing.Size(391, 368);
             this.listBox.TabIndex = 0;
             // 
             // TopScores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(412, 522);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(469, 642);
             this.Controls.Add(this.listBox);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TopScores";
             this.Text = "TopScores";
             this.Load += new System.EventHandler(this.TopScores_Load);
