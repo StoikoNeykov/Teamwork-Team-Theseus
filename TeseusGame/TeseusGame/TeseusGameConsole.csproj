@@ -63,7 +63,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TopScore\GameLogic.csproj">
+    <ProjectReference Include="..\GameLogic\GameLogic.csproj">
       <Project>{ef52cf11-102e-4e25-a94d-8dd417f90a43}</Project>
       <Name>GameLogic</Name>
     </ProjectReference>

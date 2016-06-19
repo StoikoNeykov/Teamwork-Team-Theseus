@@ -3,7 +3,7 @@
     using System;
     using System.Windows.Forms;
 
-    using TopScores;
+    using GameLogic;
 
     public static class StartUp
     {

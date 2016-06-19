@@ -2,14 +2,16 @@
 using System.IO;
 using System.Text;
 
-namespace TopScores
+namespace GameLogic
 {
     /// <summary>
-    /// Do not allow sapces in name !
+    /// Do not allow spaces in name !
     /// </summary>
     public static class TopScores
     {
         private const int tops = 10;
+
+        #region public
 
         public static string Show()
         {
@@ -57,6 +59,9 @@ namespace TopScores
             UpdateCurentBest(GetHardcoded());
         }
 
+        #endregion
+
+        #region private
         private static void AddScore(string[] scores, string name, int value, int position)
         {
             for (int i = tops - 1; i > position; i--)
@@ -108,4 +113,5 @@ namespace TopScores
             return result;
         }
     }
+    #endregion
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{EF52CF11-102E-4E25-A94D-8DD417F90A43}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TopScore</RootNamespace>
-    <AssemblyName>TopScore</AssemblyName>
+    <RootNamespace>GameLogic</RootNamespace>
+    <AssemblyName>GameLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
