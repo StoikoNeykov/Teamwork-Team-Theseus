@@ -58,7 +58,7 @@
     <Compile Include="UserControls\Credits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\Credits.designer.cs">
+    <Compile Include="UserControls\Credits.Designer.cs">
       <DependentUpon>Credits.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HowToPlay.cs">
