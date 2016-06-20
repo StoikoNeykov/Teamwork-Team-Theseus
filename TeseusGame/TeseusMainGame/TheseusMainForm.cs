@@ -23,5 +23,11 @@
             var howToPlay = new HowToPlay();
             howToPlay.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var credits = new Credits();
+            credits.Show();
+        }
     }
 }
