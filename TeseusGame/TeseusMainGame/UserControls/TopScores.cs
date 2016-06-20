@@ -17,5 +17,10 @@
 
             listBox.Items.AddRange(list);
         }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
     }
 }
