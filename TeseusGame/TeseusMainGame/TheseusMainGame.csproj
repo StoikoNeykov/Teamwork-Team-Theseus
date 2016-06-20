@@ -47,22 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TeseusMainForm.cs">
+    <Compile Include="TheseusMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeseusMainForm.Designer.cs">
-      <DependentUpon>TeseusMainForm.cs</DependentUpon>
+    <Compile Include="TheseusMainForm.Designer.cs">
+      <DependentUpon>TheseusMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\HowToPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\HowToPlay.Designer.cs">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TopScores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControls\TopScores.Designer.cs">
       <DependentUpon>TopScores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TeseusMainForm.resx">
-      <DependentUpon>TeseusMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="TheseusMainForm.resx">
+      <DependentUpon>TheseusMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\HowToPlay.resx">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TopScores.resx">
       <DependentUpon>TopScores.cs</DependentUpon>
     </EmbeddedResource>

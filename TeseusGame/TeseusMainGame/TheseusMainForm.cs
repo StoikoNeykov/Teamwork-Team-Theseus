@@ -1,13 +1,13 @@
-﻿namespace TeseusMainGame
+﻿namespace TheseusMainGame
 {
     using System;
     using System.Windows.Forms;
 
     using UserControls;
 
-    public partial class TeseusMainForm : Form
+    public partial class TheseusMainForm : Form
     {
-        public TeseusMainForm()
+        public TheseusMainForm()
         {
             InitializeComponent();
         }

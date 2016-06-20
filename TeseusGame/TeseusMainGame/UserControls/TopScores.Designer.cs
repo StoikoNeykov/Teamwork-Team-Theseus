@@ -1,4 +1,4 @@
-﻿namespace TeseusMainGame.UserControls
+﻿namespace TheseusMainGame.UserControls
 {
     partial class TopScores
     {
@@ -35,7 +35,8 @@
             // 
             // listBox
             // 
-            this.listBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox.BackColor = System.Drawing.Color.White;
+            this.listBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 21;
             this.listBox.Location = new System.Drawing.Point(49, 165);

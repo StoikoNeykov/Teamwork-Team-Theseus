@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using GameLogic;
 
-namespace TeseusGame
+namespace TheseusGame
 {
      
     using System;

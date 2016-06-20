@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TeseusMainGame
+namespace TheseusMainGame
 {
     static class Setup
     {
@@ -13,7 +13,7 @@ namespace TeseusMainGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeseusMainForm());
+            Application.Run(new TheseusMainForm());
         }
     }
 }

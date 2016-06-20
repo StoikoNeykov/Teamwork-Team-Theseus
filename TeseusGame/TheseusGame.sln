@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeseusGameConsole", "TeseusGame\TeseusGameConsole.csproj", "{C09D56FC-8391-4E2E-A6F8-B90A89FAE047}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheseusGameConsole", "TeseusGame\TheseusGameConsole.csproj", "{C09D56FC-8391-4E2E-A6F8-B90A89FAE047}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeseusMainGame", "TeseusMainGame\TeseusMainGame.csproj", "{D123D7DB-AB37-4253-BE9E-8DCBEDB27C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheseusMainGame", "TeseusMainGame\TheseusMainGame.csproj", "{D123D7DB-AB37-4253-BE9E-8DCBEDB27C5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "GameLogic\GameLogic.csproj", "{EF52CF11-102E-4E25-A94D-8DD417F90A43}"
 EndProject

@@ -1,4 +1,4 @@
-﻿namespace TeseusMainGame.UserControls
+﻿namespace TheseusMainGame.UserControls
 {
     using System.Windows.Forms;
 
@@ -8,7 +8,7 @@
     {
         public TopScores()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void TopScores_Load(object sender, System.EventArgs e)

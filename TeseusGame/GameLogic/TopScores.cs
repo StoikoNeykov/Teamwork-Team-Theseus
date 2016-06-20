@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 
 namespace GameLogic
 {
@@ -16,7 +15,6 @@ namespace GameLogic
         public static string[] Show()
         {
             var scores = LoadCurentBest();
-            // var builder = new StringBuilder();
             var arr = new string[tops];
             string name = string.Empty;
             int value;
