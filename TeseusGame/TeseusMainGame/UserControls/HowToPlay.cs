@@ -14,6 +14,7 @@ namespace TheseusMainGame.UserControls
     {
         public HowToPlay()
         {
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             InitializeComponent();
         }
     }
