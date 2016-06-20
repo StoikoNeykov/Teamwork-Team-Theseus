@@ -17,5 +17,11 @@
             var topScores = new TopScores();
             topScores.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var howToPlay = new HowToPlay();
+            howToPlay.Show();
+        }
     }
 }
