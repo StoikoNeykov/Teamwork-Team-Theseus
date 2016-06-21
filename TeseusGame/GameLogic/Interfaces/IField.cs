@@ -4,5 +4,6 @@
     {
         int Width { get; }
         int Height { get; }
+        int[,] Matrix { get; }
     }
 }

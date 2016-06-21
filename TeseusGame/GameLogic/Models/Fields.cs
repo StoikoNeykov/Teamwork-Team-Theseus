@@ -2,6 +2,7 @@
 {
     using Interfaces;
     using Exceptions;
+    using System;
 
     /// <summary>
     /// Represent fields on the UI - playgrouds 
@@ -22,6 +23,8 @@
 
         private int height;
 
+        private int[,] matrix;
+
         #endregion
 
         #region Constructors
@@ -30,6 +33,7 @@
         {
             this.Width = width;
             this.Height = height;
+            this.Matrix = new int[width, height];
         }
 
         #endregion
@@ -68,6 +72,18 @@
                 }
 
                 this.height = value;
+            }
+        }
+
+        public int[,] Matrix
+        {
+            get
+            {
+                return this.matrix;
+            }
+            private set
+            {
+                this.matrix = value;
             }
         }
 
