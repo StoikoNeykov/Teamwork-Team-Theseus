@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
+    <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\Fields.cs" />
     <Compile Include="Models\Figures.cs" />
     <Compile Include="Models\WallBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
