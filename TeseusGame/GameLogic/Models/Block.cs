@@ -16,6 +16,8 @@
 
         private bool[,] shape;
 
+        public GlobalConstant Density { get; private set; }
+
         #endregion
 
         #region Constructors

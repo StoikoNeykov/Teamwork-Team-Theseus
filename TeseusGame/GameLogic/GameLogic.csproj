@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
