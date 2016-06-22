@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerations\CreationType.cs" />
     <Compile Include="Enumerations\FigureForms.cs" />
-    <Compile Include="Exceptions\CannotPlaceItHereException.cs" />
+    <Compile Include="Exceptions\WrongCreatorException.cs" />
     <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="Factory\Factory.cs" />
-    <Compile Include="Factory\CtorBlock.cs" />
-    <Compile Include="Factory\CtorLevel.cs" />
-    <Compile Include="Factory\CtorPlayground.cs" />
-    <Compile Include="Factory\CtorWallBlock.cs" />
+    <Compile Include="Factory\FigureMaker.cs" />
+    <Compile Include="Factory\Creator.cs" />
+    <Compile Include="Factory\LevelMaker.cs" />
+    <Compile Include="Factory\WallBlockMaker.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICreator.cs" />

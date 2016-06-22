@@ -6,21 +6,18 @@
     /// <summary>
     /// On playgraound blocks
     /// </summary>
-    public abstract class Figures : Block, IBlock , IFigure, IGameElement
+    public class Figures : Block, IBlock , IFigure, IGameElement
     {
-        #region Constructors
-
         public Figures(short width, short height, short top, short left, FigureForms shape) 
             : base(width, height, top, left, shape)
         {
         }
 
-        #endregion
+        //TODO if needed
+        public bool Rotate(short rotate)
+        {
+            return false;
+        }
 
-        #region Public Methods
-
-        public abstract bool Rotate(short rotate);
-
-        #endregion
     }
 }

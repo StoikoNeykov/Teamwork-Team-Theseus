@@ -8,15 +8,9 @@
     /// </summary>
     public abstract class GameElement : IGameElement
     {
-        #region Constants
-
         private const short MaxWidth = 15;
 
         private const short MaxHeight = 30;
-
-        #endregion
-
-        #region Constructors
 
         public GameElement(short width, short height)
         {
@@ -24,17 +18,9 @@
             this.Height = height;
         }
 
-        #endregion
-
-        #region Fields
-
         private short width;
 
         private short height;
-
-        #endregion
-
-        #region Properties
 
         public short Width
         {
@@ -71,6 +57,5 @@
             }
         }
 
-        #endregion
     }
 }

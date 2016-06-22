@@ -7,5 +7,7 @@
     /// </summary>
     public enum FigureForms
     {
+        Zero,  // square 1x1
+
     }
 }
