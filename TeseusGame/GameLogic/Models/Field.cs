@@ -11,7 +11,7 @@
     {
         #region Fields
 
-        private int[,] matrix;
+        private IGameElement[,] matrix;
 
         #endregion
 
@@ -20,7 +20,7 @@
         public Field(short width, short height)
             :base(width, height)
         {
-            this.Matrix = new int[width, height];
+            this.Matrix = new IGameElement[width, height];
         }
 
         #endregion
@@ -28,7 +28,7 @@
         // readonly coz fields cannot be resized - only constructor ca set their size
         #region Properties
 
-        public int[,] Matrix
+        public IGameElement[,] Matrix
         {
             get
             {

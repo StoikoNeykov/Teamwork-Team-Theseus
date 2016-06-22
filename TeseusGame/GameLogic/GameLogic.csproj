@@ -44,8 +44,10 @@
     <Compile Include="Enumerations\FigureForms.cs" />
     <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Factory\Factory.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
+    <Compile Include="Interfaces\ICreator.cs" />
     <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />

@@ -5,6 +5,6 @@
     /// </summary>
     public interface IField : IGameElement
     {
-        int[,] Matrix { get; }
+        IGameElement[,] Matrix { get; }
     }
 }
