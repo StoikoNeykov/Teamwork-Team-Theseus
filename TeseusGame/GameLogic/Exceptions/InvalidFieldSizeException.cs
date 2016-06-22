@@ -2,18 +2,15 @@
 {
     using System;
 
-    public class InvalidFieldSizeException : ArgumentException
+    /// <summary>
+    /// 
+    /// </summary>
+    public class InvalidSizeException : ArgumentException
     {
-        private const string baseMessage = "Invali Field Size!";
+        private const string baseMessage = "Invali Size!";
 
-        public InvalidFieldSizeException()
-            :base (baseMessage)
-        {
-
-        }
-
-        public InvalidFieldSizeException(string message)
-            :base(message)
+        public InvalidSizeException(string message = baseMessage)
+            :base (message)
         {
 
         }

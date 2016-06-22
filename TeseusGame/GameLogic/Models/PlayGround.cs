@@ -2,9 +2,12 @@
 {
     using Interfaces;
 
-    public class PlayGround : Field, IField
+    /// <summary>
+    /// Play field
+    /// </summary>
+    public class PlayGround : Field, IField, IGameElement
     {
-        public PlayGround(int width, int height) 
+        public PlayGround(short width, short height) 
             : base(width, height)
         {
         }

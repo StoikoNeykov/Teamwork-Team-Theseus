@@ -1,14 +1,14 @@
 ﻿namespace GameLogic.Models
 {
+    using Enumerations;
     using Interfaces;
 
-    public abstract class Block : IBlock
+    /// <summary>
+    /// All kind of ingame blocks
+    /// </summary>
+    public abstract class Block : GameElement, IBlock, IGameElement
     {
         #region fields
-
-        private short width;
-
-        private short height;
 
         private short top;
 
@@ -16,47 +16,23 @@
 
         private bool[,] shape;
 
-        public GlobalConstant Density { get; private set; }
-
         #endregion
 
         #region Constructors
-        public Block(short width, short height, short top, short left, short shape)
+
+        public Block(short width, short height, short top, short left, FigureForms shape)
+            : base(width, height)
         {
-            this.Widht = width;
-            this.Height = height;
             this.Top = top;
             this.Left = left;
-           // this.Shape = GetShape(shape);
+            // this.Shape = GetShape(shape);
         }
+
         #endregion
 
         //TODO validations 
         #region Properties
 
-        public short Widht
-        {
-            get
-            {
-                return this.width;
-            }
-            set
-            {
-                this.width = value;
-            }
-        }
-
-        public short Height
-        {
-            get
-            {
-                return this.height;
-            }
-            set
-            {
-                this.height = value;
-            }
-        }
 
         public short Top
         {
@@ -94,26 +70,29 @@
                 this.shape = value;
             }
         }
+
+        public GlobalConstant Density { get; private set; }
+
         #endregion
 
         //TODO add shapes in cases
         #region Private Methods
 
-      // private bool[,] GetShape(short shape)
-      // {
-      //     bool[,] result;
-      //     switch (shape)
-      //     {
-      //         case 1:
-      //         case 2:
-      //         case 3:
-      //
-      //         default:
-      //             break;
-      //     }
-      //
-      //     return result;
-      // }
+        // private bool[,] GetShape(FigureForms shape)
+        // {
+        //     bool[,] result;
+        //     switch (shape)
+        //     {
+        //         case 1:
+        //         case 2:
+        //         case 3:
+        //
+        //         default:
+        //             break;
+        //     }
+        //
+        //     return result;
+        // }
 
         #endregion
     }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Figures are rotatable and movable game items
     /// </summary>
-    public interface IFigure
+    public interface IFigure : IBlock, IGameElement
     {
         bool Rotate(short rotate);
         // TODO Add moving
