@@ -9,8 +9,8 @@
     {
         private const string baseMessage = "Invali Size!";
 
-        public InvalidSizeException(string message = baseMessage)
-            :base (message)
+        public InvalidSizeException(string message = baseMessage, Exception inner = null)
+            : base(message, inner)
         {
 
         }
