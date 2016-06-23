@@ -11,6 +11,8 @@
 
         private void Close_Click(object sender, System.EventArgs e)
         {
+            var mainForm = (TheseusMainForm)Tag;
+            mainForm.Show();
             Close();
         }
     }

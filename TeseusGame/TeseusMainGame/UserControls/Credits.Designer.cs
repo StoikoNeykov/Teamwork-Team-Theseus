@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             this.label1 = new System.Windows.Forms.Label();
-            this.Close = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,16 +51,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "7. Name 7";
             // 
-            // Close
+            // Back
             // 
-            this.Close.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(67, 450);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(272, 60);
-            this.Close.TabIndex = 12;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Back.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(67, 450);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(272, 60);
+            this.Back.TabIndex = 12;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Close_Click);
             // 
             // label2
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.label1);
             this.Name = "Credits";
             this.Text = "Credits";
@@ -161,7 +161,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -15,19 +15,25 @@
         private void button3_Click(object sender, EventArgs e)
         {
             var topScores = new TopScores();
-            topScores.Show();
+            topScores.Tag = this;
+            topScores.Show(this);
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             var howToPlay = new HowToPlay();
-            howToPlay.Show();
+            howToPlay.Tag = this;
+            howToPlay.Show(this);
+            Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             var credits = new Credits();
-            credits.Show();
+            credits.Tag = this;
+            credits.Show(this);
+            Hide();
         }
     }
 }

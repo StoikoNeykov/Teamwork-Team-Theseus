@@ -9,15 +9,15 @@
     /// </summary>
     public class LevelMaker
     {
-        public IList<IGameElement> NewGame()
-        {
-
-        }
-
-        public IList<IGameElement> NewLivel()
-        { 
-
-        }
+      // public IList<IGameElement> NewGame()
+      // {
+      //
+      // }
+      //
+      // public IList<IGameElement> NewLivel()
+      // { 
+      //
+      // }
 
     }
 }

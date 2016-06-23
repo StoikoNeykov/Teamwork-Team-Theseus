@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HowToPlay));
             this.HowToPlayTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Close = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,16 +56,16 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Close
+            // Back
             // 
-            this.Close.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(71, 450);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(272, 60);
-            this.Close.TabIndex = 11;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Back.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(71, 450);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(272, 60);
+            this.Back.TabIndex = 11;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Close_Click);
             // 
             // HowToPlay
             // 
@@ -73,7 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(412, 522);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.HowToPlayTextBox);
             this.Name = "HowToPlay";
@@ -87,6 +87,6 @@
 
         private System.Windows.Forms.RichTextBox HowToPlayTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button Back;
     }
 }
