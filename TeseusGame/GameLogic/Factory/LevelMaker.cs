@@ -24,25 +24,19 @@
             Random rng = new Random();
             IList<IGameElement> level = new List<IGameElement>();
 
-            // instance of constructor
             var creator = new Creator();
 
-            // curent playground
             var playground = (PlayGround)creator.Create(CreationType.Playground);
 
-            // set walls 
-            var element = creator.Create(CreationType.WallBlock);
-            SetOuterWalls(playground, element);
+            var wall = creator.Create(CreationType.WallBlock);
+            SetOuterWalls(playground, wall);
 
-            // set random player position on line 1 (0 is wall)
             var player = creator.Create(CreationType.Player);
             playground.Matrix[1, rng.Next(playground.Width - 2) + 1] = player;
 
-            // set random end position on last line before wall
             var end = creator.Create(CreationType.End);
             playground.Matrix[playground.Height - 2, rng.Next(playground.Width - 2) + 1] = end;
 
-            // create random figures and put them on the ground
             for (int i = 0; i < figuresOnThePlayground; i++)
             {
                 var figure = GetRandomFigure(creator);
@@ -54,7 +48,6 @@
 
             level.Add(playground);
 
-            // create specialField
             var special = creator.Create(CreationType.SpecialField);
 
             // TODO figure that been show in that field and set it on
@@ -64,10 +57,6 @@
             return level;
         }
 
-        /// <summary>
-        /// Place same wallBlock on each of outer walls cells
-        /// </summary>
-        /// <param name="wallBlock">WallBlocks with FigureForm.Zero (1x1 square)</param>
         private static void SetOuterWalls(PlayGround playground, IGameElement wallBlock)
         {
             for (int i = 0; i < playground.Width; i++)
@@ -97,10 +86,6 @@
             return (IFigure)result;
         }
 
-        /// <summary>
-        /// Make X tries to place IFigure on the playgrounds
-        /// </summary>
-        /// <returns>return true if success</returns>
         private static bool PlaceFigureOnPlayground(PlayGround playground, IFigure figure)
         {
             Random rng = new Random();
@@ -113,15 +98,16 @@
                 {
                     figure.Top = (short)curentTop;
                     figure.Left = (short)curentLeft;
-                    // J -> rows, K -> cols
-                    for (int j = 0; j < figure.Shape.GetLength(0); j++)
+                    var rows = figure.Shape.GetLength(0);
+                    var cols = figure.Shape.GetLength(1);
+
+                    for (int row = 0; row < rows; row++)
                     {
-                        for (int k = 0; k < figure.Shape.GetLength(1); k++)
+                        for (int col = 0; col < cols; col++)
                         {
-                            if (figure.Shape[j, k] == true)
+                            if (figure.Shape[row, col] == true)
                             {
-                                // TODO debbug this rows and cols are right set
-                                playground.Matrix[curentTop + j, curentLeft + k] = figure;
+                                playground.Matrix[curentTop + row, curentLeft + col] = figure;
                             }
                         }
                     }
@@ -134,18 +120,16 @@
             return false;
         }
 
-        // TODO debbug this rows and cols are right set 
-        /// <summary>
-        /// Validate curent figure can be place on the playground with curentTop and curentLeft
-        /// </summary>
-        /// <returns>return true if figure can be placed on this coords successfuly</returns>
         private static bool ValidatePosition(PlayGround playground, IFigure figure, int curentTop, int curentLeft)
         {
-            for (int j = 0; j < figure.Shape.GetLength(0); j++)
+            var rows = figure.Shape.GetLength(0);
+            var cols = figure.Shape.GetLength(1);
+
+            for (int row = 0; row < rows; row++)
             {
-                for (int k = 0; k < figure.Shape.GetLength(1); k++)
+                for (int col = 0; col < cols; col++)
                 {
-                    if (!(figure.Shape[j, k] == true && playground.Matrix[curentTop + j, curentLeft + k] == null))
+                    if (!(figure.Shape[row, col] == true && playground.Matrix[curentTop + row, curentLeft + col] == null))
                     {
                         return false;
                     }
