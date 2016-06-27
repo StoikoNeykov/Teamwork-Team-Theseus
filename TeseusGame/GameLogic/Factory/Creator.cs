@@ -21,6 +21,12 @@
 
             switch (creation)
             {
+                case CreationType.End:
+                    result = new End();
+                    break;
+                case CreationType.Player:
+                    result = new Player();
+                    break;
                 case CreationType.WallBlock:
                     result = new WallBlock(1, 1, 0, 0, FigureForms.Zero);
                     break;

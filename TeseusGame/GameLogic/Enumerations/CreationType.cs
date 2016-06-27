@@ -5,6 +5,8 @@
         WallBlock,
         Figure,
         Playground,
-        SpecialField
+        SpecialField,
+        Player,
+        End
     }
 }

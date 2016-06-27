@@ -54,9 +54,11 @@
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />
     <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\End.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\Figure.cs" />
     <Compile Include="Models\GameElement.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayGround.cs" />
     <Compile Include="Models\SpecialField.cs" />
     <Compile Include="Models\WallBlock.cs" />
