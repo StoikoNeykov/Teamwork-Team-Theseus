@@ -34,6 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +69,12 @@
     <Compile Include="UserControls\HowToPlay.Designer.cs">
       <DependentUpon>HowToPlay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Play.Designer.cs">
+      <DependentUpon>Play.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TopScores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HowToPlay.resx">
       <DependentUpon>HowToPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Play.resx">
+      <DependentUpon>Play.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TopScores.resx">
       <DependentUpon>TopScores.cs</DependentUpon>

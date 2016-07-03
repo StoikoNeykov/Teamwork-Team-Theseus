@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK.Compatibility, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +54,13 @@
     <Compile Include="Factory\CtorLevel.cs" />
     <Compile Include="Factory\CtorPlayground.cs" />
     <Compile Include="Factory\CtorWallBlock.cs" />
+    <Compile Include="GameGenerator\ContentPipe.cs" />
+    <Compile Include="GameGenerator\GameTeseus.cs" />
+    <Compile Include="GameGenerator\Input.cs" />
+    <Compile Include="GameGenerator\Level.cs" />
+    <Compile Include="GameGenerator\Spritebach.cs" />
+    <Compile Include="GameGenerator\Texture2D.cs" />
+    <Compile Include="GameGenerator\View.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICreator.cs" />
@@ -65,7 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopScores.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

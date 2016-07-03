@@ -16,6 +16,8 @@
 
         private bool[,] shape;
 
+        private bool solid, platform, ladder;
+
         #endregion
 
         #region Constructors
