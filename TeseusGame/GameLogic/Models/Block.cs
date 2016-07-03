@@ -16,10 +16,6 @@
 
         private bool solid, platform, ladder;
 
-        #endregion
-
-        #region Constructors
-
         public Block(short width, short height, short top, short left, FigureForms shape)
             : base(width, height)
         {

@@ -10,8 +10,6 @@ namespace GameLogic
     {
         private const int tops = 10;
 
-        #region public
-
         public static string[] Show()
         {
             var scores = LoadCurentBest();
@@ -58,9 +56,7 @@ namespace GameLogic
             UpdateCurentBest(GetHardcoded());
         }
 
-        #endregion
 
-        #region private
         private static void AddScore(string[] scores, string name, int value, int position)
         {
             for (int i = tops - 1; i > position; i--)
@@ -112,5 +108,4 @@ namespace GameLogic
             return result;
         }
     }
-    #endregion
 }
