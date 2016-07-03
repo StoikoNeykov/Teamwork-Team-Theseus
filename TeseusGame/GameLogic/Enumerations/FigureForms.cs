@@ -18,4 +18,7 @@
         Wood,
         Marble
     }
+        Zero,  // square 1x1
+
+    }
 }

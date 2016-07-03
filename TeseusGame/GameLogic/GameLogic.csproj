@@ -45,15 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerations\CreationType.cs" />
     <Compile Include="Enumerations\FigureForms.cs" />
-    <Compile Include="Exceptions\CannotPlaceItHereException.cs" />
+    <Compile Include="Exceptions\WrongCreationException.cs" />
     <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="Factory\Factory.cs" />
-    <Compile Include="Factory\CtorBlock.cs" />
-    <Compile Include="Factory\CtorLevel.cs" />
-    <Compile Include="Factory\CtorPlayground.cs" />
-    <Compile Include="Factory\CtorWallBlock.cs" />
+    <Compile Include="Factory\Creator.cs" />
+    <Compile Include="Factory\LevelMaker.cs" />
     <Compile Include="GameGenerator\ContentPipe.cs" />
     <Compile Include="GameGenerator\GameTeseus.cs" />
     <Compile Include="GameGenerator\Input.cs" />
@@ -63,15 +61,17 @@
     <Compile Include="GameGenerator\View.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
-    <Compile Include="Interfaces\ICreator.cs" />
     <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />
     <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\End.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\Figure.cs" />
     <Compile Include="Models\GameElement.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayGround.cs" />
+    <Compile Include="Models\SpecialField.cs" />
     <Compile Include="Models\WallBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopScores.cs" />

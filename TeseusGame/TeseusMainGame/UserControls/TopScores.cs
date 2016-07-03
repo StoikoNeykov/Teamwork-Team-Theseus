@@ -20,6 +20,8 @@
 
         private void button4_Click(object sender, System.EventArgs e)
         {
+            var mainForm = (TheseusMainForm)Tag;
+            mainForm.Show();
             Close();
         }
     }

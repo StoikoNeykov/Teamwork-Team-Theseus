@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopScores));
             this.listBox = new System.Windows.Forms.ListBox();
-            this.Close = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox
@@ -44,16 +44,16 @@
             this.listBox.Size = new System.Drawing.Size(320, 256);
             this.listBox.TabIndex = 0;
             // 
-            // Close
+            // Back
             // 
-            this.Close.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(68, 441);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(272, 56);
-            this.Close.TabIndex = 10;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.button4_Click);
+            this.Back.Font = new System.Drawing.Font("Segoe Print", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(68, 441);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(272, 56);
+            this.Back.TabIndex = 10;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.button4_Click);
             // 
             // TopScores
             // 
@@ -63,7 +63,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(412, 522);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.listBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -77,6 +77,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox;
-        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button Back;
     }
 }

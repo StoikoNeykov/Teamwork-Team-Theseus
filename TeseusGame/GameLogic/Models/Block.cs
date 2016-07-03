@@ -8,8 +8,6 @@
     /// </summary>
     public abstract class Block : GameElement, IBlock, IGameElement
     {
-        #region fields
-
         private short top;
 
         private short left;
@@ -30,11 +28,7 @@
             // this.Shape = GetShape(shape);
         }
 
-        #endregion
-
         //TODO validations 
-        #region Properties
-
 
         public short Top
         {
@@ -75,10 +69,7 @@
 
         public GlobalConstant Density { get; private set; }
 
-        #endregion
-
         //TODO add shapes in cases
-        #region Private Methods
 
         // private bool[,] GetShape(FigureForms shape)
         // {
@@ -96,7 +87,6 @@
         //     return result;
         // }
 
-        #endregion
     }
 
 }
