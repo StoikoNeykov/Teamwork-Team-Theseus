@@ -8,7 +8,7 @@
     using Models;
 
     /// <summary>
-    /// Facada
+    /// Factory
     /// </summary>
     public class LevelMaker
     {

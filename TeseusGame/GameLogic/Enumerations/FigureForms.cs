@@ -7,17 +7,7 @@
     /// </summary>
     public enum FigureForms
     {
-        Solid,
-        Empty,
-        Steel,
-        Paper,
-        WaxPaper,
-        BookPaper,
-        CrushedStone,
-        Diamand,
-        Wood,
-        Marble
-    }
+            
         Zero,  // square 1x1
 
     }
