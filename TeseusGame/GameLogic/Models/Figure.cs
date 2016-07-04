@@ -8,7 +8,7 @@
     /// </summary>
     public class Figures : Block, IBlock , IFigure, IGameElement
     {
-        public Figures(short width, short height, short top, short left, FigureForms shape) 
+        public Figures(short width, short height, short top, short left, FigureFormsType shape) 
             : base(width, height, top, left, shape)
         {
         }

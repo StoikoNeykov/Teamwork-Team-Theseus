@@ -7,15 +7,7 @@
 
     public class Creator
     {
-        private const int StandartWidth = 4;
-
-        private const int StandartHeight = 4;
-
-        private const int SpecialWidth = 4;
-
-        private const int SpecialHeight = 4;
-
-        public virtual IGameElement Create(CreationType creation, FigureForms shape = FigureForms.Zero)
+        public virtual IGameElement Create(CreationType creation, FigureFormsType shape = FigureFormsType.Zero)
         {
             IGameElement result;
 
@@ -25,10 +17,10 @@
                     result = new Figures(1, 1, 0, 0, shape);
                     break;
                 case CreationType.Playground:
-                    result = new PlayGround(StandartWidth + 2, StandartHeight + 2);
+                    result = new PlayGround(GlobalConstant.StandarPlaygroundtWidth + 2, GlobalConstant.StandartPlaygroundHeight + 2);
                     break;
                 case CreationType.WallBlock:
-                    result = new WallBlock(1, 1, 0, 0, FigureForms.Zero);
+                    result = new WallBlock(1, 1, 0, 0, FigureFormsType.Zero);
                     break;
                 case CreationType.End:
                     result = new End();
@@ -36,8 +28,8 @@
                 case CreationType.Player:
                     result = new Player();
                     break;
-                case CreationType.SpecialField:   
-                    result = new SpecialField(SpecialWidth, SpecialHeight);
+                case CreationType.SpecialField:
+                    result = new SpecialField(GlobalConstant.SpecialFieldWidth, GlobalConstant.SpecialFieldHeight);
                     break;
                 default:
                     throw new WrongCreationException();

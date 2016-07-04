@@ -16,7 +16,7 @@
 
         private bool solid, platform, ladder;
 
-        public Block(short width, short height, short top, short left, FigureForms shape)
+        public Block(short width, short height, short top, short left, FigureFormsType shape)
             : base(width, height)
         {
             this.Top = top;

@@ -1,9 +1,5 @@
-﻿
-namespace GameLogic
+﻿namespace GameLogic
 {
-    using System;
-
-
     public class GlobalConstant
     {
         public const double WaxPaperDesity = 0.028;
@@ -16,5 +12,16 @@ namespace GameLogic
         public const double SolidDensity = 100;
         public const double EmptyDensity = 0;
         public const double PaperDensity = 0.05;
+
+        // Creator constants
+        public const int StandarPlaygroundtWidth = 10;
+        public const int StandartPlaygroundHeight = 20;
+        public const int SpecialFieldWidth = 4;
+        public const int SpecialFieldHeight = 4;
+
+        // LevelMaker constants
+        // WARNING: If too many figures been set endless loop is posible!!! 
+        public const int figuresOnThePlayground = 15;
+        public const int maxTriesToPlaceFigure = 50;
     }
 }
