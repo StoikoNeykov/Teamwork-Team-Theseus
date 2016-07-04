@@ -16,5 +16,10 @@ namespace TeseusMainGame.UserControls
         {
             InitializeComponent();
         }
+
+        private void glControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
