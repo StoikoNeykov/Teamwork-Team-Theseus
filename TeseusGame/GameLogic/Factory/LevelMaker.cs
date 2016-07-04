@@ -8,17 +8,10 @@
     using Models;
 
     /// <summary>
-    /// Facada
+    /// Factory
     /// </summary>
     public class LevelMaker
     {
-        private const int maxTriesToPlaceFigure = 50;
-
-        /// <summary>
-        /// WARNING: If too many figures been set endless loop is posible!!! 
-        /// </summary>
-        private const int figuresOnThePlayground = 15;
-
         public virtual IList<IGameElement> NewLivel()
         {
             Random rng = new Random();
@@ -37,7 +30,7 @@
             var end = creator.Create(CreationType.End);
             playground.Matrix[playground.Height - 2, rng.Next(playground.Width - 2) + 1] = end;
 
-            for (int i = 0; i < figuresOnThePlayground; i++)
+            for (int i = 0; i < GlobalConstant.figuresOnThePlayground; i++)
             {
                 var figure = GetRandomFigure(creator);
                 if (!PlaceFigureOnPlayground(playground, figure))
@@ -79,9 +72,9 @@
 
         private static IFigure GetRandomFigure(Creator creator)
         {
-            var arr = Enum.GetValues(typeof(FigureForms));
+            var arr = Enum.GetValues(typeof(FigureFormsType));
             Random rng = new Random();
-            var randomForm = (FigureForms)arr.GetValue(rng.Next(arr.Length));
+            var randomForm = (FigureFormsType)arr.GetValue(rng.Next(arr.Length));
             var result = creator.Create(CreationType.Figure, randomForm);
             return (IFigure)result;
         }
@@ -89,7 +82,7 @@
         private static bool PlaceFigureOnPlayground(PlayGround playground, IFigure figure)
         {
             Random rng = new Random();
-            for (int i = 0; i < maxTriesToPlaceFigure; i++)
+            for (int i = 0; i < GlobalConstant.maxTriesToPlaceFigure; i++)
             {
                 // -2 and +1 make sure figure wont try to be set on outer walls
                 var curentTop = rng.Next(playground.Height - figure.Height - 2) + 1;

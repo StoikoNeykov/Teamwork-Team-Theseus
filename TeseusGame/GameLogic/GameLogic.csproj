@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumerations\CreationType.cs" />
-    <Compile Include="Enumerations\FigureForms.cs" />
+    <Compile Include="Enumerations\FigureFormsType.cs" />
+    <Compile Include="Enumerations\MaterialType.cs" />
     <Compile Include="Exceptions\WrongCreationException.cs" />
     <Compile Include="Exceptions\InvalidFieldSizeException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />

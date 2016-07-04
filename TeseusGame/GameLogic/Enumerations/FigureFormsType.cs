@@ -5,19 +5,9 @@
     /// Target : Most of rotations to looks like FigureFOrm ++ so we have make 1 switch in Rotate()
     /// that only check curent and change form 
     /// </summary>
-    public enum FigureForms
+    public enum FigureFormsType
     {
-        Solid,
-        Empty,
-        Steel,
-        Paper,
-        WaxPaper,
-        BookPaper,
-        CrushedStone,
-        Diamand,
-        Wood,
-        Marble
-    }
+            
         Zero,  // square 1x1
 
     }
