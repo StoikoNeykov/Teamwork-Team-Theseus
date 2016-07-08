@@ -28,7 +28,7 @@
             {
                 return this.width;
             }
-            private set
+            protected set
             {
                 if (value <= 0 || value > MaxWidth)
                 {
@@ -46,7 +46,7 @@
             {
                 return this.height;
             }
-            set
+            protected set
             {
                 if (value <= 0 || value > MaxHeight)
                 {

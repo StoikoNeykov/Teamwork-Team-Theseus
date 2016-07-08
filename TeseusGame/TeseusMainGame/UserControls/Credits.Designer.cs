@@ -1,5 +1,6 @@
 ﻿namespace TheseusMainGame.UserControls
 {
+    
     partial class Credits
     {
         /// <summary>
@@ -28,6 +29,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+           
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             this.label1 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();

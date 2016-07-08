@@ -65,23 +65,372 @@
 
         public GlobalConstant Density { get; private set; }
 
-        //TODO add shapes in cases
+        //TODO check if correct!
 
-        // private bool[,] GetShape(FigureForms shape)
-        // {
-        //     bool[,] result;
-        //     switch (shape)
-        //     {
-        //         case 1:
-        //         case 2:
-        //         case 3:
-        //
-        //         default:
-        //             break;
-        //     }
-        //
-        //     return result;
-        // }
+        private bool[,] GetShape(FigureFormsType shape)
+        {
+            int shapeToInt = (int)shape;
+            bool[,] result;
+            switch (shapeToInt)
+            {
+                case 0: //"straight":
+                    this.Width = 1;
+                    this.Height = 4;
+                    this.top = 0;
+                    this.left = 5;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = true;
+                    result[0, 2] = true;
+                    result[0, 3] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 1: //"Square":
+                    this.Width = 2;
+                    this.Height = 2;
+                    this.top = 0;
+                    this.left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = true;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 2: //"cornerleft":
+                    this.Width = 3;
+                    this.Height = 2;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[1, 0] = true;
+                    result[2, 0] = true;
+                    result[0, 1] = true;
+                    result[1, 1] = false;
+                    result[2, 1] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 3: //"cornerright":
+                    this.Width = 3;
+                    this.Height = 2;
+                    this.top = 0;
+                    this.left = 4;
+                    result = new bool[Width, Height];
+
+                    result[0, 0] = true;
+                    result[1, 0] = true;
+                    result[2, 0] = true;
+                    result[0, 1] = false;
+                    result[1, 1] = false;
+                    result[2, 1] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 4: //"cross":
+                    this.Width = 3;
+                    this.Height = 2;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[1, 0] = true;
+                    result[2, 0] = true;
+                    result[0, 1] = false;
+                    result[1, 1] = true;
+                    result[2, 1] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 5: //"zigzag1":
+                    this.Width = 2;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[1, 0] = true;
+                    result[0, 1] = true;
+                    result[1, 1] = true;
+                    result[0, 2] = true;
+                    result[1, 2] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 6: //"zigzag2":
+                    this.Width = 2;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[1, 0] = false;
+                    result[0, 1] = true;
+                    result[1, 1] = true;
+                    result[0, 2] = false;
+                    result[1, 2] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 7: //"zero":
+                    this.Width = 1;
+                    this.Height = 1;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                
+                    this.Shape = result;
+                    break;
+
+                case 8: //"cross2":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[0, 1] = true;
+                    result[0, 2] = false;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[1, 2] = true;
+                    result[2, 0] = false;
+                    result[2, 1] = true;
+                    result[2, 2] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 9: //"rectangle1":
+                    this.Width = 3;
+                    this.Height = 2;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = false;   
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[2, 0] = true;
+                    result[2, 1] = true;
+                   
+                    this.Shape = result;
+                    break;
+
+                case 10: //"cross3":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[0, 1] = true;
+                    result[0, 2] = false;
+                    result[1, 0] = false;
+                    result[1, 1] = true;
+                    result[1, 2] = false;
+                    result[2, 0] = true;
+                    result[2, 1] = true;
+                    result[2, 2] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 11: //"zigzag3":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[1, 0] = true;
+                    result[0, 1] = true;
+                    result[1, 1] = true;
+                    result[0, 2] = true;
+                    result[1, 2] = false;
+                    result[2, 0] = true;
+                    result[2, 1] = false;
+                    result[2, 2] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 12: //"zigzag4":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[1, 0] = true;
+                    result[0, 1] = false;
+                    result[1, 1] = true;
+                    result[0, 2] = true;
+                    result[1, 2] = true;
+                    result[2, 0] = true;
+                    result[2, 1] = false;
+                    result[2, 2] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 13: //"rectangle2":
+                    this.Width = 3;
+                    this.Height = 2;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = true;
+                    result[1, 0] = true;
+                    result[1, 1] = false;
+                    result[2, 0] = true;
+                    result[2, 1] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 14: //"cross4":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[0, 1] = true;
+                    result[0, 2] = true;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[1, 2] = false;
+                    result[2, 0] = false;
+                    result[2, 1] = true;
+                    result[2, 2] = false;
+
+                    this.Shape = result;
+                    break;
+
+                case 15: //"linecornerleft1":
+                    this.Width = 2;
+                    this.Height = 4;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = false;
+                    result[0, 2] = false;
+                    result[0, 3] = false;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[1, 2] = true;
+                    result[1, 3] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 16: //"linecornerleft2":
+                    this.Width = 2;
+                    this.Height = 4;
+                    this.Top = 0;
+                    this.Left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[0, 1] = true;
+                    result[0, 2] = false;
+                    result[0, 3] = false;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[1, 2] = true;
+                    result[1, 3] = true;
+
+                    this.Shape = result;
+                    break;
+
+                case 17: //"straight2":
+                    this.Width = 1;
+                    this.Height = 5;
+                    this.top = 0;
+                    this.left = 5;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = true;
+                    result[0, 2] = true;
+                    result[0, 3] = true;
+                    result[0, 4] = true;
+
+                    this.Shape = result;
+                    break;
+
+
+                case 18: //"zigzag5":
+                    this.Width = 2;
+                    this.Height = 4;
+                    this.top = 0;
+                    this.left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = false;
+                    result[0, 1] = true;
+                    result[0, 2] = true;
+                    result[0, 3] = true;
+                    result[1, 0] = true;
+                    result[1, 1] = true;
+                    result[1, 2] = false;
+                    result[1, 3] = false;
+
+
+                    this.Shape = result;
+                    break;
+
+                case 19: //"angle1":
+                    this.Width = 3;
+                    this.Height = 3;
+                    this.top = 0;
+                    this.left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = false;
+                    result[0, 2] = false;
+                    result[1, 0] = true;
+                    result[1, 1] = false;
+                    result[1, 2] = false;
+                    result[2, 0] = true;
+                    result[2, 1] = true;
+                    result[2, 2] = true;
+
+
+                    this.Shape = result;
+                    break;
+
+                case 20: //"angle2":
+                    this.Width = 2;
+                    this.Height = 2;
+                    this.top = 0;
+                    this.left = 4;
+                    result = new bool[Width, Height];
+                    result[0, 0] = true;
+                    result[0, 1] = true; 
+                    result[1, 0] = false;
+                    result[1, 1] = true;
+
+                    this.Shape = result;
+                    break;
+
+                default:
+                    throw new System.ArgumentException("Invalid block code");
+            }
+
+            return result;
+        }
 
     }
 

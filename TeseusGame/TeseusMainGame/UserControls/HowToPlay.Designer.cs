@@ -1,5 +1,6 @@
 ﻿namespace TheseusMainGame.UserControls
 {
+    using System.Drawing.Text;
     partial class HowToPlay
     {
         /// <summary>
@@ -28,6 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"D:\Teamwork\Team2\Teamwork-Team-Theseus\TeseusGame\adonais\Adonais.ttf");
+
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HowToPlay));
             this.HowToPlayTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

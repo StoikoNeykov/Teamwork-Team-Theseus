@@ -1,5 +1,6 @@
 ﻿namespace TheseusMainGame
 {
+    using System.Drawing.Text;
     partial class TheseusMainForm
     {
         /// <summary>
@@ -28,6 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"D:\Teamwork\Team2\Teamwork-Team-Theseus\TeseusGame\adonais\Adonais.ttf");
+
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheseusMainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -97,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(412, 522);
+            this.ClientSize = new System.Drawing.Size(412, 540);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

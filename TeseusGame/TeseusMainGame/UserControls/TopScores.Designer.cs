@@ -1,5 +1,6 @@
 ﻿namespace TheseusMainGame.UserControls
 {
+    using System.Drawing.Text;
     partial class TopScores
     {
         /// <summary>
@@ -28,6 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"D:\Teamwork\Team2\Teamwork-Team-Theseus\TeseusGame\adonais\Adonais.ttf");
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopScores));
             this.listBox = new System.Windows.Forms.ListBox();
             this.Back = new System.Windows.Forms.Button();
@@ -68,7 +72,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TopScores";
-            this.Text = "TopScores";
+            this.Text = "TopScorse";
             this.Load += new System.EventHandler(this.TopScores_Load);
             this.ResumeLayout(false);
 
