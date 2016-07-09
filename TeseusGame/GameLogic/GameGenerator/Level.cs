@@ -86,8 +86,27 @@ namespace GameLogic.GameGenerator
                 using (JsonTextReader reader = new JsonTextReader(new StreamReader(filePath)))
                 {
                     RootObject root = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+                    int width = root.Width;
+                    int height = root.Height;
 
+                    grid = new Block[width, height];
+                    this.fileName = filePath;
+                    playerStartPos = new Point(1, 1);
 
+                    Layer layer = JsonConvert.DeserializeObject<Layer>(reader.ToString());
+                    
+
+                    int x = 0, y = 0;
+                    for (int i = 0; i < layer.Data.Count; i++)
+                    {
+
+                        x++;
+                        if (x>=width)
+                        {
+                            x = 0;
+                            y++;
+                        }
+                    }
 
                 }
 
