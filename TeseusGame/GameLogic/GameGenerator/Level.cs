@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Data;
+using Newtonsoft.Json;
 
 namespace GameLogic.GameGenerator
 {
@@ -94,18 +95,64 @@ namespace GameLogic.GameGenerator
                     playerStartPos = new Point(1, 1);
 
                     Layer layer = JsonConvert.DeserializeObject<Layer>(reader.ToString());
-                    
+                    RootObject tiles = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+
 
                     int x = 0, y = 0;
-                    for (int i = 0; i < layer.Data.Count; i++)
+                    for (int i = 0; i < tiles.Tilesets.Count; i++)
                     {
+                        int gid = tiles.Tilesets[i].Firstgid;
 
+                        switch (gid)
+                        {
+                            default:
+                                grid[x, y] = new Block(BlockType.Empty, x, y);
+                                break;
+                            case 1:
+                                grid[x, y] = new Block(BlockType.Ice_Block, x, y);
+                                break;
+                            case 2:
+                                grid[x, y] = new Block(BlockType.Brick_Block, x, y);
+                                break;
+                            case 3:
+                                grid[x, y] = new Block(BlockType.StoneBlocks, x, y);
+                                break;
+                            case 4:
+                                grid[x, y] = new Block(BlockType.diamand, x, y);
+                                break;
+                            case 5:
+                                grid[x, y] = new Block(BlockType.Paper, x, y);
+                                break;
+
+                        }
                         x++;
                         if (x>=width)
                         {
                             x = 0;
                             y++;
                         }
+
+                        RootObject objects = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+
+                        DataSet dataset = JsonConvert.DeserializeObject<DataSet>(reader.ToString());
+
+                        DataTable table = dataset.Tables["objects"];
+
+                        foreach (DataRow row in table.Rows)
+                        {
+                            int xPos = int.Parse(row["x"].ToString());
+                            int yPos = int.Parse(row["y"].ToString());
+
+                            switch (row["name"].ToString())
+                            {
+                                case "TeseusStart":
+                                    this.playerStartPos = new Point((int) (xPos/128), (int) yPos/128);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
                     }
 
                 }

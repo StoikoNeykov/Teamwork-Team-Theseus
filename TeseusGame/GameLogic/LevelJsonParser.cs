@@ -31,6 +31,7 @@ namespace GameLogic
         public int Version { get; set; }
         [JsonProperty("width")]
         public int Width { get; set; }
+
     }
     public class Layer
     {
