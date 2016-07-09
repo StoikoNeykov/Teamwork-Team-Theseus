@@ -4,7 +4,7 @@
 
     public class WrongCreationException : InvalidOperationException
     {
-        public WrongCreationException(string message = "Using wrong constructor!", Exception inner = null)
+        public WrongCreationException(string message = GlobalConstant.WrongCreationError, Exception inner = null)
             : base(message, inner)
         {
 

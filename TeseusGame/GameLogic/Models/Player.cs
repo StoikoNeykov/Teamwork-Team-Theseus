@@ -1,5 +1,7 @@
 ﻿namespace GameLogic.Models
 {
+    using System;
+    using Enumerations;
     using Interfaces;
 
     /// <summary>
@@ -12,8 +14,10 @@
         public Player()
             : base(1, 1)
         {
+            this.ViewDirection = Directions.Up;
         }
 
+        public Directions ViewDirection { get; set; }
 
         public int Left { get; set; }
 
@@ -26,6 +30,5 @@
         }
 
         public int Top { get; set; }
-
     }
 }

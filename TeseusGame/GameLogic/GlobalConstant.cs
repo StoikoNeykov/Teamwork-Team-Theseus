@@ -24,8 +24,9 @@
         public const int figuresOnThePlayground = 15;
         public const int maxTriesToPlaceFigure = 50;
 
-
         public const string TopScoresFileName = @"TopScore.dat";
         public const int Tops = 10;
+
+        public const string WrongCreationError = "Cannot use that method for that creation!";
     }
 }
