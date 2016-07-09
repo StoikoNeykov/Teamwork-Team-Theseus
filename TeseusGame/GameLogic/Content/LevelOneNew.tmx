@@ -3,7 +3,7 @@
  <tileset firstgid="1" name="Ice_Block_NSMBDIY" tilewidth="128" tileheight="128" tilecount="1" columns="1">
   <image source="Ice_Block_NSMBDIY.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="2" name="Brick_Block (1)" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+ <tileset firstgid="2" name="Brick_Block" tilewidth="128" tileheight="128" tilecount="1" columns="1">
   <image source="Brick_Block (1).png" trans="ff00ff" width="128" height="128"/>
  </tileset>
  <tileset firstgid="3" name="StoneBlocks" tilewidth="128" tileheight="128" tilecount="1" columns="1">

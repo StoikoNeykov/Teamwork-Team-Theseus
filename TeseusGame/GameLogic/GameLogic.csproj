@@ -91,9 +91,15 @@
     <Compile Include="TopScores.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\LevelOne.json" />
-    <None Include="Content\LevelOne.tmx" />
-    <None Include="Content\LevelOneNew.tmx" />
+    <None Include="Content\LevelOne.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\LevelOne.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\LevelOneNew.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Content\OpenTK.Compatibility.dll.config" />
     <None Include="Content\OpenTK.dll.config" />
   </ItemGroup>
@@ -101,7 +107,6 @@
     <Content Include="Content\128Blocks.png" />
     <Content Include="Content\Blocks-128.png" />
     <Content Include="Content\BlocksAngryBirds.png" />
-    <Content Include="Content\Brick_Block %281%29.png" />
     <Content Include="Content\Brick_Block.png" />
     <Content Include="Content\diamand.jpg" />
     <Content Include="Content\diamand.png" />
