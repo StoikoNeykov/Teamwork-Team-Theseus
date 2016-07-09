@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace GameLogic
 {
@@ -8,16 +7,14 @@ namespace GameLogic
     /// </summary>
     public static class TopScores
     {
-        private const int tops = 10;
-
         public static string[] Show()
         {
-            var scores = LoadCurentBest();
-            var arr = new string[tops];
+            var scores = DataTransfer.LoadCurentBest();
+            var arr = new string[GlobalConstant.Tops];
             string name = string.Empty;
             int value;
             var interval = 1;
-            for (int i = 0; i < tops; i++)
+            for (int i = 0; i < GlobalConstant.Tops; i++)
             {
                 if (i == 9 || i == 99)
                 {
@@ -35,8 +32,8 @@ namespace GameLogic
 
         public static void CheckScore(string name, int value)
         {
-            var scores = LoadCurentBest();
-            for (int i = 0; i < tops; i++)
+            var scores = DataTransfer.LoadCurentBest();
+            for (int i = 0; i < GlobalConstant.Tops; i++)
             {
                 var splited = scores[i]
                     .Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
@@ -45,7 +42,7 @@ namespace GameLogic
                 if (value > scoreValue)
                 {
                     AddScore(scores, name, value, i);
-                    UpdateCurentBest(scores);
+                    DataTransfer.UpdateCurentBest(scores);
                     break;
                 }
             }
@@ -53,13 +50,13 @@ namespace GameLogic
 
         public static void Clear()
         {
-            UpdateCurentBest(GetHardcoded());
+            DataTransfer.UpdateCurentBest(DataTransfer.GetHardcoded());
         }
 
 
         private static void AddScore(string[] scores, string name, int value, int position)
         {
-            for (int i = tops - 1; i > position; i--)
+            for (int i = GlobalConstant.Tops - 1; i > position; i--)
             {
                 scores[i] = scores[i - 1];
             }
@@ -67,45 +64,5 @@ namespace GameLogic
             scores[position] = string.Format($"{name} {value}");
         }
 
-        private static void UpdateCurentBest(string[] scores)
-        {
-            using (var writer = new StreamWriter("TopScore.dat", false))
-            {
-                foreach (var score in scores)
-                {
-                    writer.WriteLine(score);
-                }
-            }
-        }
-
-        private static string[] LoadCurentBest()
-        {
-            if (!File.Exists("TopScore.dat"))
-            {
-                UpdateCurentBest(GetHardcoded());
-            }
-
-            var result = new string[tops];
-            using (var reader = new StreamReader("TopScore.dat"))
-            {
-                for (int i = 0; i < tops; i++)
-                {
-                    result[i] = reader.ReadLine() ?? "NoName 0";
-                }
-            }
-
-            return result;
-        }
-
-        private static string[] GetHardcoded()
-        {
-            var result = new string[tops];
-            for (int i = 0; i < tops; i++)
-            {
-                result[i] = "NoName 0";
-            }
-
-            return result;
-        }
     }
 }

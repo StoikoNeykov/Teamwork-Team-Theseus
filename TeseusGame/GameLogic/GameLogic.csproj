@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransfer.cs" />
     <Compile Include="Enumerations\CreationType.cs" />
     <Compile Include="Enumerations\FigureFormsType.cs" />
     <Compile Include="Enumerations\MaterialType.cs" />

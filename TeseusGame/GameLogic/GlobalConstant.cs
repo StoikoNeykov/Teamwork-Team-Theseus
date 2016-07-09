@@ -23,5 +23,9 @@
         // WARNING: If too many figures been set endless loop is posible!!! 
         public const int figuresOnThePlayground = 15;
         public const int maxTriesToPlaceFigure = 50;
+
+
+        public const string TopScoresFileName = @"TopScore.dat";
+        public const int Tops = 10;
     }
 }
