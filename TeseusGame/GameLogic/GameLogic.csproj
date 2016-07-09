@@ -82,6 +82,7 @@
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="LevelJsonParser.cs" />
     <Compile Include="Models\Block.cs" />
     <Compile Include="Models\End.cs" />
     <Compile Include="Models\Field.cs" />
@@ -101,8 +102,10 @@
     <None Include="Content\LevelOne.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Content\LevelOneNew.json" />
     <None Include="Content\LevelOneNew.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Content\OpenTK.Compatibility.dll.config" />
     <None Include="Content\OpenTK.dll.config" />

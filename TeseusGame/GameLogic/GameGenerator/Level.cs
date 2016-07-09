@@ -7,6 +7,11 @@
     using Models;
     using System.Xml;
 
+    public class Item
+    {
+        public int data;
+
+    }
     struct Level
     {
         private Block[,] grid;
@@ -53,21 +58,33 @@
         {
             try
             {
-                using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+
+
+
+
+                //using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                //{
+                //    XmlDocument doc=new XmlDocument();
+                //    doc.Load(stream);
+
+                //    int width=int.Parse(doc.DocumentElement.GetAttribute("width"));
+                //    int height = int.Parse(doc.DocumentElement.GetAttribute("height"));
+
+                //    grid = new Block[width, height];
+                //    this.fileName = filePath;
+                //    playerStartPos = new Point(1, 1);
+
+                //    XmlNode tileLeyer = doc.DocumentElement.SelectSingleNode("layer[@name='Tile Layer 1']");
+                //    XmlNodeList tiles = tileLeyer.SelectSingleNode("data").SelectNodes("tile");
+
+                //    /////To do 
+                //    /// 
+
+                //}
+                using (StreamReader stream = new StreamReader(filePath))
                 {
-                    XmlDocument doc=new XmlDocument();
-                    doc.Load(stream);
-
-                    int width=int.Parse(doc.DocumentElement.GetAttribute("width"));
-                    int height = int.Parse(doc.DocumentElement.GetAttribute("height"));
-
-                    grid = new Block[width, height];
-                    this.fileName = filePath;
-                    playerStartPos = new Point(1, 1);
-
-                    XmlNode tileLeyer = doc.DocumentElement.SelectSingleNode("layer[@name='Tile Layer 1']");
-                    XmlNodeList tiles = tileLeyer.SelectSingleNode("data").SelectNodes("tile");
-
+                    string json = stream.ReadToEnd();
+                    XmlNodeList<
                 }
 
             }
