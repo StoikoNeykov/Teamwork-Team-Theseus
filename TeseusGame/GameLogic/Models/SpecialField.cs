@@ -4,7 +4,7 @@
 
     public class SpecialField : Field, IField, IGameElement
     {
-        public SpecialField(short width, short height)
+        public SpecialField(int width, int height)
             : base(width, height)
         {
         }

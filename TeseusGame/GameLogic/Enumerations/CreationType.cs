@@ -1,4 +1,4 @@
-﻿namespace GameLogic.Enumerations
+namespace GameLogic.Enumerations
 {
     public enum CreationType
     {

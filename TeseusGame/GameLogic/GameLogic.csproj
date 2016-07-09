@@ -73,9 +73,11 @@
     <Compile Include="GameGenerator\View.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
+    <Compile Include="Interfaces\ICreator.cs" />
     <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Models\Block.cs" />
     <Compile Include="Models\End.cs" />
     <Compile Include="Models\Field.cs" />

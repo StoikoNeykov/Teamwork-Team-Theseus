@@ -11,7 +11,7 @@
     {
         private IGameElement[,] matrix;
 
-        public Field(short width, short height)
+        public Field(int width, int height)
             : base(width, height)
         {
             this.Matrix = new IGameElement[width, height];

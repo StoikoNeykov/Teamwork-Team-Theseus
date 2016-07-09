@@ -7,7 +7,7 @@
     /// </summary>
     public class PlayGround : Field, IField, IGameElement
     {
-        public PlayGround(short width, short height) 
+        public PlayGround(int width, int height) 
             : base(width, height)
         {
         }

@@ -5,7 +5,7 @@
     /// </summary>
     public interface IFigure : IBlock, IGameElement
     {
-        bool Rotate(short rotate);
+        bool Rotate(int rotate);
         // TODO Add moving
     }
 }

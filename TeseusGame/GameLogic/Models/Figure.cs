@@ -8,13 +8,13 @@
     /// </summary>
     public class Figures : Block, IBlock , IFigure, IGameElement
     {
-        public Figures(short width, short height, short top, short left, FigureFormsType shape) 
+        public Figures(int width, int height, int top, int left, FigureFormsType shape) 
             : base(width, height, top, left, shape)
         {
         }
 
         //TODO if needed
-        public bool Rotate(short rotate)
+        public bool Rotate(int rotate)
         {
             return false;
         }
