@@ -91,6 +91,7 @@
     <Compile Include="TopScores.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\LevelOne.tmx" />
     <None Include="Content\OpenTK.Compatibility.dll.config" />
     <None Include="Content\OpenTK.dll.config" />
   </ItemGroup>
@@ -104,6 +105,12 @@
     <Content Include="Content\OpenTK.dll" />
     <Content Include="Content\OpenTK.GLControl.dll" />
     <Content Include="Content\OpenTK.GLControl.xml" />
+    <Content Include="Content\Teseus.gif" />
+    <Content Include="Content\Tetris.png" />
+    <Content Include="Content\Tetris2.png" />
+    <Content Include="Content\Tetris22.bmp" />
+    <Content Include="Content\Wall.jpg" />
+    <Content Include="Content\Wall2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
