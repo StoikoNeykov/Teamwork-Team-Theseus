@@ -11,7 +11,7 @@
             InitializeComponent();
 
             PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile(@"D:\Teamwork\Team2\Teamwork-Team-Theseus\TeseusGame\adonais\Adonais.ttf");
+            pfc.AddFontFile(@"..\..\Font\Adonais.ttf");
 
             Back.Font = new System.Drawing.Font(pfc.Families[0], 25, System.Drawing.FontStyle.Regular);
             label8.Font = new System.Drawing.Font(pfc.Families[0], 25, System.Drawing.FontStyle.Regular);
