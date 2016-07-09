@@ -1,4 +1,6 @@
-﻿namespace GameLogic.GameGenerator
+﻿using Newtonsoft.Json;
+
+namespace GameLogic.GameGenerator
 {
     using System;
     using OpenTK;
@@ -81,11 +83,14 @@
                 //    /// 
 
                 //}
-                using (StreamReader stream = new StreamReader(filePath))
+                using (JsonTextReader reader = new JsonTextReader(new StreamReader(filePath)))
                 {
-                    string json = stream.ReadToEnd();
-                    XmlNodeList<
+                    RootObject root = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+
+
+
                 }
+
 
             }
             catch (Exception e)
