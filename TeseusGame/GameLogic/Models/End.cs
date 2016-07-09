@@ -1,6 +1,7 @@
 ﻿namespace GameLogic.Models
 {
     using System;
+    using Enumerations;
     using Interfaces;
 
     /// <summary>
@@ -13,7 +14,10 @@
         public End()
             : base(1, 1)
         {
+            this.Material = MaterialType.Empty;
         }
+
+        public MaterialType Material { get; set; }
 
         public int Left { get; set; }
 
