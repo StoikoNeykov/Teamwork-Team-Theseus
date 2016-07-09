@@ -47,7 +47,7 @@
 
         }
 
-        public IPlayer CreatePlayer(CreationType creation = CreationType.Player, FigureFormsType shape = FigureFormsType.Zero)
+        public virtual IPlayer CreatePlayer(CreationType creation = CreationType.Player, FigureFormsType shape = FigureFormsType.Zero)
         {
             switch (creation)
             {

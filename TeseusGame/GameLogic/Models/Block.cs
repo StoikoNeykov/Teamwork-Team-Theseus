@@ -12,7 +12,7 @@
 
         private int left;
 
-        private bool[,] shape;
+        public bool[,] shape;
 
         private bool solid, platform, ladder;
 
@@ -21,7 +21,7 @@
         {
             this.Top = top;
             this.Left = left;
-            // this.Shape = GetShape(shape);
+            this.Shape = GetShape(shape);
         }
 
         //TODO validations 
@@ -49,8 +49,7 @@
                 this.left = value;
             }
         }
-
-        // realonly for now 
+        
         public bool[,] Shape
         {
             get

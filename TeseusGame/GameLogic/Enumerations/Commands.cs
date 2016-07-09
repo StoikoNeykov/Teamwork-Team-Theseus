@@ -5,6 +5,7 @@
         MoveUp,
         MoveRight,
         MoveDown,
-        MoveLeft
+        MoveLeft,
+        Show
     }
 }

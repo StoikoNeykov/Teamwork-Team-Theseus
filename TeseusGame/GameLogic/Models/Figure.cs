@@ -13,11 +13,5 @@
         {
         }
 
-        //TODO if needed
-        public bool Rotate(int rotate)
-        {
-            return false;
-        }
-
     }
 }

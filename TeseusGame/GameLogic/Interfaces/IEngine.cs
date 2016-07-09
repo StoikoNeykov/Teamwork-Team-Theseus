@@ -4,6 +4,6 @@
 
     public interface IEngine
     {
-        void ExecuteCommand(IField playrground,IPlayer player, Commands command);
+        void ExecuteCommand(IField playrground, IField specialField, IPlayer player, string command);
     }
 }

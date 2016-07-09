@@ -43,7 +43,14 @@
             return playground;
         }
 
-        private static void SetOuterWalls(IField playground, IBlock wallBlock)
+        public virtual IField NewSpecialField()
+        {
+            var creator = new Creator();
+            var result = creator.CreateField(CreationType.SpecialField);
+            return result;
+        }
+
+        public virtual void SetOuterWalls(IField playground, IBlock wallBlock)
         {
             for (int i = 0; i < playground.Width; i++)
             {
@@ -63,7 +70,7 @@
             }
         }
 
-        private static IFigure GetRandomFigure(ICreator creator)
+        public virtual IFigure GetRandomFigure(ICreator creator)
         {
             var arr = Enum.GetValues(typeof(FigureFormsType));
             Random rng = new Random();
@@ -72,7 +79,7 @@
             return result;
         }
 
-        private static bool PlaceFigureOnPlayground(IField playground, IFigure figure)
+        public virtual bool PlaceFigureOnPlayground(IField playground, IFigure figure)
         {
             Random rng = new Random();
             for (int i = 0; i < GlobalConstant.maxTriesToPlaceFigure; i++)
@@ -106,7 +113,7 @@
             return false;
         }
 
-        private static bool ValidatePosition(IField playground, IFigure figure, int curentTop, int curentLeft)
+        public virtual bool ValidatePosition(IField playground, IFigure figure, int curentTop, int curentLeft)
         {
             var rows = figure.Shape.GetLength(0);
             var cols = figure.Shape.GetLength(1);
