@@ -56,7 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTransfer.cs" />
+    <Compile Include="Engine\Engine.cs" />
+    <Compile Include="Enumerations\Commands.cs" />
     <Compile Include="Enumerations\CreationType.cs" />
+    <Compile Include="Enumerations\Directions.cs" />
     <Compile Include="Enumerations\FigureFormsType.cs" />
     <Compile Include="Enumerations\MaterialType.cs" />
     <Compile Include="Exceptions\WrongCreationException.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICreator.cs" />
+    <Compile Include="Interfaces\IEngine.cs" />
     <Compile Include="Interfaces\IField.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Interfaces\IGameElement.cs" />
@@ -126,6 +130,7 @@
     <Content Include="Content\Wall.jpg" />
     <Content Include="Content\Wall2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
