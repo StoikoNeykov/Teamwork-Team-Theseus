@@ -1,21 +1,18 @@
 ﻿namespace GameLogic.Factory
 {
     using System;
-    using System.Collections.Generic;
 
     using Enumerations;
     using Interfaces;
-    using Models;
 
     /// <summary>
     /// Factory
     /// </summary>
     public class LevelMaker
     {
-        public virtual IList<IGameElement> NewLivel()
+        public virtual IField NewLivel()
         {
             Random rng = new Random();
-            IList<IGameElement> level = new List<IGameElement>();
 
             var creator = new Creator();
 
@@ -43,15 +40,7 @@
                 }
             }
 
-            level.Add(playground);
-
-            var special = creator.CreateField(CreationType.SpecialField);
-
-            // TODO figure that been show in that field and set it on
-
-            level.Add(special);
-
-            return level;
+            return playground;
         }
 
         private static void SetOuterWalls(IField playground, IBlock wallBlock)
