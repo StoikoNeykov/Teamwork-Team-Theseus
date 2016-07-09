@@ -10,21 +10,27 @@ using System.Windows.Forms;
 using GameLogic.GameGenerator;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
+using OpenTK.Input;
+using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
+
 namespace TeseusMainGame.UserControls
 {
     public partial class Play : Form
     {
         bool loaded = false;
-        private Texture2D texture;
+        private Texture2D texture,tileset;
         private ViewGame view;
         private Level level;
+        public static int GRIDSIZE = 32, TILESIZE = 128;
         public Play()
         {
         
             InitializeComponent();
-        
-        }
       
+           
+        }
+
+    
         private void glControl1_Load(object sender, EventArgs e)
         {
             OpenTK.Graphics.OpenGL.GL.Enable(EnableCap.Texture2D);
@@ -34,17 +40,26 @@ namespace TeseusMainGame.UserControls
 
             //GL.Enable(EnableCap.Texture2D);
 
-            texture = ContentPipe.LoadTexture("diamand.jpg");
-            view = new ViewGame(Vector2.Zero, 0.5, MathHelper.PiOver6);
-            level=new Level("Content/LevelOneNew.json");
-           
+            tileset = ContentPipe.LoadTexture("diamand.jpg");
+            view = new ViewGame(Vector2.Zero, 2f, 0);
+            level=new Level("../../../GameLogic/Content/LevelOneNew.json");
+            //var mouse = Mouse.GetState();
+           // Input.Initialize(this);
 
+
+            glControl1.MouseDown += GlControl1_MouseDown;
         }
+
+        private void GlControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
         float rotation = 0;
         private void Application_Idle(object sender, EventArgs e)
         {
-           
-           
+            
+
         }
 
         private void Play_Load(object sender, EventArgs e)
@@ -59,36 +74,53 @@ namespace TeseusMainGame.UserControls
             {
                 return;
             }
-         
+             
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-          
-       
-            GL.LoadIdentity();
-        
-            view.ApplyTransform();
-           
-            GL.BindTexture(TextureTarget.Texture2D, texture.ID);
+         
+            //GL.BindTexture(TextureTarget.Texture2D, texture.ID);
 
+            Spritebach.Begin(this.Width, this.Height);
+             view.ApplyTransform();
+            for (int x = 0; x < level.Width; x++)
+            {
+                for (int y = 0; y < level.Height; y++)
+                {
+                    RectangleF source = new RectangleF(0, 0, 0, 0);
+                    switch (level[x, y].Type)
+                    {
+                        case BlockType.Brick_Block:
+                            source = new RectangleF(1*TILESIZE, 0*TILESIZE, TILESIZE, TILESIZE);
 
-            GL.Begin(PrimitiveType.Quads);
-            GL.Color3(Color.AliceBlue);
+                            break;
+                        case BlockType.Ice_Block:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
 
+                            break;
+                        case BlockType.StoneBlocks:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
 
-            GL.Vertex2(0, 0);
-            GL.TexCoord2(0, 0);
-            GL.Vertex2(1, 0);
-            GL.TexCoord2(1, 1);
-            GL.Vertex2(1, -0.9f);
-            GL.TexCoord2(0, 1);
-            GL.Vertex2(0, -1);
-      
-            GL.End();
+                            break;
+                        case BlockType.Paper:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                        case BlockType.diamand:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                    }
+                    Spritebach.Drow(tileset,new Vector2(x* GRIDSIZE, y* GRIDSIZE),new Vector2((float)GRIDSIZE/TILESIZE),Color.Aquamarine,Vector2.Zero,source );
+                }
+            }
             //Spritebach.Drow(texture, Vector2.Zero, new Vector2(0.2f, 0.2f), Color.DarkGreen, new Vector2(10, 50));
-            view.position.Y += 0.01f;
-            // view.Update();
-            glControl1.SwapBuffers();
+            //view.position.Y += 0.001f;
+          
             glControl1.Invalidate();
+            view.Update();
+           
+            glControl1.SwapBuffers();
+         
 
         }
 
@@ -98,16 +130,74 @@ namespace TeseusMainGame.UserControls
             {
                  return;
             }
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
+            //GL.BindTexture(TextureTarget.Texture2D, texture.ID);
+
+            Spritebach.Begin(this.Width, this.Height);
+            view.ApplyTransform();
+            for (int x = 0; x < level.Width; x++)
+            {
+                for (int y = 0; y < level.Height; y++)
+                {
+                    RectangleF source = new RectangleF(0, 0, 0, 0);
+                    switch (level[x, y].Type)
+                    {
+                        case BlockType.Brick_Block:
+                            source = new RectangleF(1 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                        case BlockType.Ice_Block:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                        case BlockType.StoneBlocks:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                        case BlockType.Paper:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                        case BlockType.diamand:
+                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+
+                            break;
+                    }
+                    Spritebach.Drow(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE / TILESIZE), Color.Aquamarine, Vector2.Zero, source);
+                }
+            }
+            //Spritebach.Drow(texture, Vector2.Zero, new Vector2(0.2f, 0.2f), Color.DarkGreen, new Vector2(10, 50));
+            //view.position.Y += 0.001f;
+
+            glControl1.Invalidate();
+            view.Update();
+
+            glControl1.SwapBuffers();
+
+
             glControl1.Invalidate();
         }
 
         private void glControl1_MouseDown(object sender, MouseEventArgs e)
         {
-            Vector2 pos=new Vector2(e.X,e.Y);
-            pos -= new Vector2(this.Width, this.Height)/2f;
-            pos = view.ToWorld(pos);
+            //Vector2 pos = new Vector2(e.X, e.Y);
+            //pos -= new Vector2(texture.Width, texture.Height) / 2f;
+            //pos = view.ToWorld(pos);
+            //view.SetPosition(pos, TweenType.QuadraticInOut, 1000);
+            // view.position = pos;
+            var mouse = Mouse.GetState();
 
-            view.position = pos;
+            if (mouse[MouseButton.Left])
+            {
+                Vector2 pos = new Vector2(e.X, e.Y) - new Vector2(this.Width, this.Height) / 2f;
+                pos = view.ToWorld(pos);
+
+                view.SetPosition(pos, TweenType.QuarticInOut, 1000);
+
+            }
+            glControl1.Invalidate();
+            
         }
     }
 }

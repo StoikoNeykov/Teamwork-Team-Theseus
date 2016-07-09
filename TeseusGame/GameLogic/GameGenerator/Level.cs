@@ -1,5 +1,7 @@
 ﻿using System.Data;
+using System.Windows.Forms;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GameLogic.GameGenerator
 {
@@ -61,32 +63,11 @@ namespace GameLogic.GameGenerator
         {
             try
             {
-
-
-
-
-                //using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-                //{
-                //    XmlDocument doc=new XmlDocument();
-                //    doc.Load(stream);
-
-                //    int width=int.Parse(doc.DocumentElement.GetAttribute("width"));
-                //    int height = int.Parse(doc.DocumentElement.GetAttribute("height"));
-
-                //    grid = new Block[width, height];
-                //    this.fileName = filePath;
-                //    playerStartPos = new Point(1, 1);
-
-                //    XmlNode tileLeyer = doc.DocumentElement.SelectSingleNode("layer[@name='Tile Layer 1']");
-                //    XmlNodeList tiles = tileLeyer.SelectSingleNode("data").SelectNodes("tile");
-
-                //    /////To do 
-                //    /// 
-
-                //}
-                using (JsonTextReader reader = new JsonTextReader(new StreamReader(filePath)))
+                JObject obj=JObject.Parse(File.ReadAllText(filePath));
+                using (StreamReader file=new StreamReader(filePath))
                 {
-                    RootObject root = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+                    var str = file.ReadToEnd();
+                    RootObject root = JsonConvert.DeserializeObject<RootObject>(str);
                     int width = root.Width;
                     int height = root.Height;
 
@@ -94,8 +75,8 @@ namespace GameLogic.GameGenerator
                     this.fileName = filePath;
                     playerStartPos = new Point(1, 1);
 
-                    Layer layer = JsonConvert.DeserializeObject<Layer>(reader.ToString());
-                    RootObject tiles = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+                    Layer layer = JsonConvert.DeserializeObject<Layer>(str);
+                    RootObject tiles = JsonConvert.DeserializeObject<RootObject>(str);
 
 
                     int x = 0, y = 0;
@@ -132,26 +113,26 @@ namespace GameLogic.GameGenerator
                             y++;
                         }
 
-                        RootObject objects = JsonConvert.DeserializeObject<RootObject>(reader.ToString());
+                       // RootObject objects = JsonConvert.DeserializeObject<RootObject>(str);
 
-                        DataSet dataset = JsonConvert.DeserializeObject<DataSet>(reader.ToString());
+                        //DataSet dataset = JsonConvert.DeserializeObject<DataSet>(str);
 
-                        DataTable table = dataset.Tables["objects"];
+                        //DataTable table = dataset.Tables["objects"];
 
-                        foreach (DataRow row in table.Rows)
-                        {
-                            int xPos = int.Parse(row["x"].ToString());
-                            int yPos = int.Parse(row["y"].ToString());
+                        //foreach (DataRow row in table.Rows)
+                        //{
+                        //    int xPos = int.Parse(row["x"].ToString());
+                        //    int yPos = int.Parse(row["y"].ToString());
 
-                            switch (row["name"].ToString())
-                            {
-                                case "TeseusStart":
-                                    this.playerStartPos = new Point((int) (xPos/128), (int) yPos/128);
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
+                        //    switch (row["name"].ToString())
+                        //    {
+                        //        case "TeseusStart":
+                        //            this.playerStartPos = new Point((int) (xPos/128), (int) yPos/128);
+                        //            break;
+                        //        default:
+                        //            break;
+                        //    }
+                        //}
 
                     }
 
@@ -161,6 +142,8 @@ namespace GameLogic.GameGenerator
             }
             catch (Exception e)
             {
+                MessageBox.Show(e.Message);
+
                 int width = 20;
                 int height = 20;
                 grid = new Block[width, height];

@@ -22,7 +22,7 @@ namespace GameLogic.GameGenerator
         private static List<MouseButton> buttonDown;
         private static List<MouseButton> buttonDownLast;
 
-        public static void Initialize(GameWindow game)
+        public static void Initialize(OpenTK.GLControl game)
         {
             keyDown = new List<Key>();
             keyDownLast = new List<Key>();
@@ -31,10 +31,10 @@ namespace GameLogic.GameGenerator
             buttonDownLast = new List<MouseButton>();
 
 
-            game.KeyDown += Game_KeyDown;
-            game.KeyUp += Game_KeyUp;
-            game.MouseDown += Game_MouseDown;
-            game.MouseUp += Game_MouseUp;
+            //game.KeyDown += Game_KeyDown;
+            //game.KeyUp += Game_KeyUp;
+            //game.MouseDown += Game_MouseDown;
+            //game.MouseUp += Game_MouseUp;
         }
 
         private static void Game_MouseUp(object sender, MouseButtonEventArgs e)

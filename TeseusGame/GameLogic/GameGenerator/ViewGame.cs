@@ -44,22 +44,24 @@
         /// 2=2x zoom
         /// </summary>
         public double zoom;
-        /// <summary>
-        /// Moving the texture with the mouse
-        ///
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public Vector2 ToWorld(Vector2 input)
-        {
-            input /= (float) zoom;
-            Vector2 dx = new Vector2((float) Math.Cos(rotation), (float) Math.Sin(rotation));
-            Vector2 dy = new Vector2((float) Math.Cos(rotation +MathHelper.PiOver2), (float) Math.Sin(rotation+ MathHelper.PiOver2));
 
-            return (this.position + dx*input.X + dy*input.Y);
-        }
+      /// <summary>
+      /// Moving the texture with the mouse
+      ///
+      /// </summary>
+      /// <param name="input"></param>
+      /// <returns></returns>
+      public Vector2 ToWorld(Vector2 input)
+      {
+          input /= (float) zoom;
+          Vector2 dx = new Vector2((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+          Vector2 dy = new Vector2((float)Math.Cos(rotation + MathHelper.PiOver2),
+              (float)Math.Sin(rotation + MathHelper.PiOver2));
+             
+          return (this.position + dx * input.X + dy * input.Y);
+      }
 
-        //public Vector2 Position
+      //public Vector2 Position
         //{
         //    get { return this.position; }
         //}
@@ -80,7 +82,7 @@
                 switch (tweentype)
                 {
                     case TweenType.Linear:
-                        position = positionFrom + (positionGoTo - positionFrom)*GetLinear((float) curentStep/tweenSteps);
+                        position = positionFrom + (positionGoTo - positionFrom) * GetLinear((float)curentStep / tweenSteps);
 
                         break;
                     case TweenType.CubicInOut:
@@ -93,7 +95,7 @@
                         position = positionFrom + (positionGoTo - positionFrom) * GetQuarticInOut((float)curentStep / tweenSteps);
                         break;
                 }
-             
+
             }
             else
             {
@@ -131,8 +133,8 @@
         }
         public void SetPosition(Vector2 newposition,TweenType type,int numSteps)
         {
+            this.positionFrom = position;
             this.position = newposition;
-            this.positionFrom = newposition;
             this.positionGoTo = newposition;
             tweentype = type;
             curentStep = 0;
