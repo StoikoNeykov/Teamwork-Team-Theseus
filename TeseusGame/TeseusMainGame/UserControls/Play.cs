@@ -22,9 +22,7 @@ namespace TeseusMainGame.UserControls
         {
         
             InitializeComponent();
-         
-           
-
+        
         }
       
         private void glControl1_Load(object sender, EventArgs e)
@@ -37,19 +35,16 @@ namespace TeseusMainGame.UserControls
             //GL.Enable(EnableCap.Texture2D);
 
             texture = ContentPipe.LoadTexture("diamand.jpg");
-            view = new ViewGame(Vector2.Zero, 1.0, 0.0);
+            view = new ViewGame(Vector2.Zero, 0.5, MathHelper.PiOver6);
             level=new Level("Content/LevelOneNew.json");
+           
+
         }
         float rotation = 0;
         private void Application_Idle(object sender, EventArgs e)
         {
-             //  GL.Enable(EnableCap.Texture2D);
-            //while (glControl1.IsIdle)
-            //{
-            
-            //    rotation += 1;
-            //    view.Update();
-            //}
+           
+           
         }
 
         private void Play_Load(object sender, EventArgs e)
@@ -72,7 +67,7 @@ namespace TeseusMainGame.UserControls
             GL.LoadIdentity();
         
             view.ApplyTransform();
-
+           
             GL.BindTexture(TextureTarget.Texture2D, texture.ID);
 
 
@@ -87,15 +82,14 @@ namespace TeseusMainGame.UserControls
             GL.Vertex2(1, -0.9f);
             GL.TexCoord2(0, 1);
             GL.Vertex2(0, -1);
-
-
+      
             GL.End();
             //Spritebach.Drow(texture, Vector2.Zero, new Vector2(0.2f, 0.2f), Color.DarkGreen, new Vector2(10, 50));
-
-
+            view.position.Y += 0.01f;
+            // view.Update();
             glControl1.SwapBuffers();
-          
-          
+            glControl1.Invalidate();
+
         }
 
         private void glControl1_Resize(object sender, EventArgs e)
@@ -104,8 +98,16 @@ namespace TeseusMainGame.UserControls
             {
                  return;
             }
-           
             glControl1.Invalidate();
+        }
+
+        private void glControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Vector2 pos=new Vector2(e.X,e.Y);
+            pos -= new Vector2(this.Width, this.Height)/2f;
+            pos = view.ToWorld(pos);
+
+            view.position = pos;
         }
     }
 }

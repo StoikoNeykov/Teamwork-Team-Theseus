@@ -32,7 +32,7 @@
             }
         }
 
-        private Vector2 position;
+        public Vector2 position;
 
         /// <summary>
         /// In Radiants += clocwise rotation of the camera
@@ -59,10 +59,10 @@
             return (this.position + dx*input.X + dy*input.Y);
         }
 
-        public Vector2 Position
-        {
-            get { return this.position; }
-        }
+        //public Vector2 Position
+        //{
+        //    get { return this.position; }
+        //}
 
 
         public ViewGame(Vector2 startPosition, double startZoom = 1.0, double startRotation = 0.0)
