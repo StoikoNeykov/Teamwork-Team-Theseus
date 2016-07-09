@@ -15,7 +15,10 @@
             : base(1, 1)
         {
             this.ViewDirection = Directions.Up;
+            this.Material = MaterialType.Solid;
         }
+
+        public MaterialType Material { get; set; }
 
         public Directions ViewDirection { get; set; }
 

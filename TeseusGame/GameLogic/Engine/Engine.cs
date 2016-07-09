@@ -37,7 +37,7 @@
                     ExecuteMove(playground, player, Commands.MoveLeft);
                     break;
                 case "show":
-                    ExecuteNotMovingCommand(playground, specialField, player, Commands.Show);
+                    ShowFigureInSpecialField(playground, specialField, player);
                     break;
                 case "change":
                     ChangeMaterial(playground, player, newMaterial);
@@ -92,18 +92,6 @@
             }
 
             return false;
-        }
-
-        public virtual void ExecuteNotMovingCommand(IField playground, IField specialField, IPlayer player, Commands command)
-        {
-            switch (command)
-            {
-                case Commands.Show:
-                    ShowFigureInSpecialField(playground, specialField, player);
-                    break;
-                default:
-                    throw new InvalidOperationException(GlobalConstant.WrongCommandError);
-            }
         }
 
         public virtual void ShowFigureInSpecialField(IField playground, IField specialField, IPlayer player)
