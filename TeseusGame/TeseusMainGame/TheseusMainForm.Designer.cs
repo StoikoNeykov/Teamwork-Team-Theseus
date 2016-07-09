@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile(@"D:\Teamwork\Team2\Teamwork-Team-Theseus\TeseusGame\adonais\Adonais.ttf");
+            pfc.AddFontFile(@"../../Font/Adonais.ttf");
 
 
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheseusMainForm));

@@ -115,6 +115,7 @@
     <EmbeddedResource Include="UserControls\TopScores.resx">
       <DependentUpon>TopScores.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Font\Adonais.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
