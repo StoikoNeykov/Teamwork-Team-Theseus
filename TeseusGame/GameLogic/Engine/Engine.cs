@@ -13,6 +13,14 @@
 
         public virtual void ExecuteCommand(IField playground, IField specialField, IPlayer player, string command)
         {
+            int newMaterial = 0;
+
+            if (command.Contains(" "))
+            {
+                newMaterial = int.Parse(command.Split(' ')[1]);
+                command = "change";
+            }
+
             //commands is still not ready so I leave that ugly texts like that just for now! 
             switch (command)
             {
@@ -31,7 +39,8 @@
                 case "show":
                     ExecuteNotMovingCommand(playground, specialField, player, Commands.Show);
                     break;
-                case "changeblockofview":
+                case "change":
+                    ChangeMaterial(playground, player, newMaterial);
                     break;
                 default:
                     throw new InvalidOperationException(GlobalConstant.WrongCommandError);
@@ -117,6 +126,18 @@
                         specialField.Matrix[row, col] = figure;
                     }
                 }
+            }
+        }
+
+        public virtual void ChangeMaterial(IField playground, IPlayer player, int newMaterial)
+        {
+            var figureRow = player.Top + moves[(int)player.ViewDirection, 0];
+            var figureCol = player.Left + moves[(int)player.ViewDirection, 1];
+            var figure = (IFigure)playground.Matrix[figureRow, figureCol];
+
+            if (0 <= newMaterial && newMaterial < Enum.GetValues(typeof(MaterialType)).Length)
+            {
+                figure.Material = (MaterialType)newMaterial;
             }
         }
     }
