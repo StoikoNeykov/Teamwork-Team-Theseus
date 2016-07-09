@@ -8,7 +8,7 @@
     /// </summary>
     public class WallBlock : Block, IBlock, IGameElement
     {
-        public WallBlock(short width, short height, short top, short left, FigureFormsType shape)
+        public WallBlock(int width, int height, int top, int left, FigureFormsType shape)
      : base(width, height, top, left, shape)
         {
         }

@@ -4,38 +4,59 @@
     using Enumerations;
     using Interfaces;
     using Models;
+    using System;
 
-    public class Creator
+    public class Creator : ICreator
     {
-        public virtual IGameElement Create(CreationType creation, FigureFormsType shape = FigureFormsType.Zero)
+        public virtual IField CreateField(CreationType creation)
         {
-            IGameElement result;
+            switch (creation)
+            {
 
+                case CreationType.Playground:
+                    return new PlayGround(GlobalConstant.StandarPlaygroundtWidth + 2, GlobalConstant.StandartPlaygroundHeight + 2);
+                case CreationType.SpecialField:
+                    return new SpecialField(GlobalConstant.SpecialFieldWidth, GlobalConstant.SpecialFieldHeight);
+                default:
+                    throw new WrongCreationException();
+            }
+        }
+
+        public virtual IFigure CreateFigure(CreationType creation = CreationType.Figure, FigureFormsType shape = FigureFormsType.Zero)
+        {
             switch (creation)
             {
                 case CreationType.Figure:
-                    result = new Figures(1, 1, 0, 0, shape);
-                    break;
-                case CreationType.Playground:
-                    result = new PlayGround(GlobalConstant.StandarPlaygroundtWidth + 2, GlobalConstant.StandartPlaygroundHeight + 2);
-                    break;
+                    return new Figures(1, 1, 0, 0, shape);
+                default:
+                    throw new WrongCreationException();
+            }
+        }
+
+        public virtual IBlock CreateBlock(CreationType creation, FigureFormsType shape = FigureFormsType.Zero)
+        {
+            switch (creation)
+            {
+
                 case CreationType.WallBlock:
-                    result = new WallBlock(1, 1, 0, 0, FigureFormsType.Zero);
-                    break;
+                    return new WallBlock(1, 1, 0, 0, shape);
                 case CreationType.End:
-                    result = new End();
-                    break;
-                case CreationType.Player:
-                    result = new Player();
-                    break;
-                case CreationType.SpecialField:
-                    result = new SpecialField(GlobalConstant.SpecialFieldWidth, GlobalConstant.SpecialFieldHeight);
-                    break;
+                    return new End();
                 default:
                     throw new WrongCreationException();
             }
 
-            return result;
+        }
+
+        public IPlayer CreatePlayer(CreationType creation = CreationType.Player, FigureFormsType shape = FigureFormsType.Zero)
+        {
+            switch (creation)
+            {
+                case CreationType.Player:
+                    return new Player();
+                default:
+                    throw new WrongCreationException();
+            }
         }
     }
 }

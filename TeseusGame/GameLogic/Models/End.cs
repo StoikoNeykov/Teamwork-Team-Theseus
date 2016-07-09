@@ -1,18 +1,31 @@
 ﻿namespace GameLogic.Models
 {
+    using System;
     using Interfaces;
 
     /// <summary>
     /// Represent target location
     /// </summary>
-    public class End : GameElement, IGameElement
+    public class End : GameElement, IGameElement, IBlock
     {
-        public End() 
+        private bool[,] shape = { { true } };
+
+        public End()
             : base(1, 1)
         {
         }
 
-        // Note if top and left been set (for some reason) to be made ne abstract parent class 
-        // for this and player class, to be changed LevelMaker too (where been set things like that)
+        public int Left { get; set; }
+
+        public bool[,] Shape
+        {
+            get
+            {
+                return shape;
+            }
+        }
+
+        public int Top { get; set; }
+
     }
 }

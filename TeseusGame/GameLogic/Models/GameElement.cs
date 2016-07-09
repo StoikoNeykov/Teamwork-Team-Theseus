@@ -8,21 +8,21 @@
     /// </summary>
     public abstract class GameElement : IGameElement
     {
-        private const short MaxWidth = 15;
+        private const int MaxWidth = 15;
 
-        private const short MaxHeight = 30;
+        private const int MaxHeight = 30;
 
-        public GameElement(short width, short height)
+        public GameElement(int width, int height)
         {
             this.Width = width;
             this.Height = height;
         }
 
-        private short width;
+        private int width;
 
-        private short height;
+        private int height;
 
-        public short Width
+        public int Width
         {
             get
             {
@@ -40,7 +40,7 @@
         }
 
 
-        public short Height
+        public int Height
         {
             get
             {

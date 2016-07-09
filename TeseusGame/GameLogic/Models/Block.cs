@@ -8,15 +8,15 @@
     /// </summary>
     public abstract class Block : GameElement, IBlock, IGameElement
     {
-        private short top;
+        private int top;
 
-        private short left;
+        private int left;
 
         private bool[,] shape;
 
         private bool solid, platform, ladder;
 
-        public Block(short width, short height, short top, short left, FigureFormsType shape)
+        public Block(int width, int height, int top, int left, FigureFormsType shape)
             : base(width, height)
         {
             this.Top = top;
@@ -26,7 +26,7 @@
 
         //TODO validations 
 
-        public short Top
+        public int Top
         {
             get
             {
@@ -38,7 +38,7 @@
             }
         }
 
-        public short Left
+        public int Left
         {
             get
             {

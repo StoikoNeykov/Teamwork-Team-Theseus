@@ -19,16 +19,20 @@
 
             var creator = new Creator();
 
-            var playground = (PlayGround)creator.Create(CreationType.Playground);
+            var playground = creator.CreateField(CreationType.Playground);
 
-            var wall = creator.Create(CreationType.WallBlock);
+            var wall = creator.CreateBlock(CreationType.WallBlock);
             SetOuterWalls(playground, wall);
 
-            var player = creator.Create(CreationType.Player);
-            playground.Matrix[1, rng.Next(playground.Width - 2) + 1] = player;
+            var player = creator.CreatePlayer();
+            player.Top = 1;
+            player.Left = rng.Next(playground.Width - 2) + 1;
+            playground.Matrix[player.Top, player.Left] = player;
 
-            var end = creator.Create(CreationType.End);
-            playground.Matrix[playground.Height - 2, rng.Next(playground.Width - 2) + 1] = end;
+            var end = creator.CreateBlock(CreationType.End);
+            end.Top = playground.Height - 2;
+            end.Left = rng.Next(playground.Width - 2) + 1;
+            playground.Matrix[end.Top, end.Left] = end;
 
             for (int i = 0; i < GlobalConstant.figuresOnThePlayground; i++)
             {
@@ -41,7 +45,7 @@
 
             level.Add(playground);
 
-            var special = creator.Create(CreationType.SpecialField);
+            var special = creator.CreateField(CreationType.SpecialField);
 
             // TODO figure that been show in that field and set it on
 
@@ -50,7 +54,7 @@
             return level;
         }
 
-        private static void SetOuterWalls(PlayGround playground, IGameElement wallBlock)
+        private static void SetOuterWalls(IField playground, IBlock wallBlock)
         {
             for (int i = 0; i < playground.Width; i++)
             {
@@ -70,16 +74,16 @@
             }
         }
 
-        private static IFigure GetRandomFigure(Creator creator)
+        private static IFigure GetRandomFigure(ICreator creator)
         {
             var arr = Enum.GetValues(typeof(FigureFormsType));
             Random rng = new Random();
             var randomForm = (FigureFormsType)arr.GetValue(rng.Next(arr.Length));
-            var result = creator.Create(CreationType.Figure, randomForm);
-            return (IFigure)result;
+            var result = creator.CreateFigure(CreationType.Figure, randomForm);
+            return result;
         }
 
-        private static bool PlaceFigureOnPlayground(PlayGround playground, IFigure figure)
+        private static bool PlaceFigureOnPlayground(IField playground, IFigure figure)
         {
             Random rng = new Random();
             for (int i = 0; i < GlobalConstant.maxTriesToPlaceFigure; i++)
@@ -89,8 +93,8 @@
                 var curentLeft = rng.Next(playground.Width - figure.Width - 2) + 1;
                 if (ValidatePosition(playground, figure, curentTop, curentLeft))
                 {
-                    figure.Top = (short)curentTop;
-                    figure.Left = (short)curentLeft;
+                    figure.Top = (int)curentTop;
+                    figure.Left = (int)curentLeft;
                     var rows = figure.Shape.GetLength(0);
                     var cols = figure.Shape.GetLength(1);
 
@@ -113,7 +117,7 @@
             return false;
         }
 
-        private static bool ValidatePosition(PlayGround playground, IFigure figure, int curentTop, int curentLeft)
+        private static bool ValidatePosition(IField playground, IFigure figure, int curentTop, int curentLeft)
         {
             var rows = figure.Shape.GetLength(0);
             var cols = figure.Shape.GetLength(1);

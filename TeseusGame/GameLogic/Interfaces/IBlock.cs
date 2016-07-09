@@ -5,8 +5,8 @@
     /// </summary>
     public interface IBlock : IGameElement
     {
-        short Top { get; set; }
-        short Left { get; set; }
+        int Top { get; set; }
+        int Left { get; set; }
         bool[,] Shape { get; }
     }
 }

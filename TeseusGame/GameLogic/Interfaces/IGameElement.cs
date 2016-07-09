@@ -5,7 +5,7 @@
     /// </summary>
     public interface IGameElement
     {
-        short Width { get; }
-        short Height { get; }
+        int Width { get; }
+        int Height { get; }
     }
 }
