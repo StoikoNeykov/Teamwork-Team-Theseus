@@ -6,7 +6,7 @@
     {
         IField CreateField(CreationType creation);
 
-        IFigure CreateFigure(CreationType creation, FigureFormsType shape);
+        IFigure CreateFigure(CreationType creation, FigureFormsType shape, MaterialType material);
 
         IBlock CreateBlock(CreationType creation, FigureFormsType shape);
 

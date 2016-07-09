@@ -16,12 +16,14 @@
 
         private bool solid, platform, ladder;
 
-        public Block(int width, int height, int top, int left, FigureFormsType shape)
+        public Block(int width, int height, int top, int left, FigureFormsType shape, MaterialType material)
             : base(width, height)
         {
             this.Top = top;
             this.Left = left;
             this.Shape = GetShape(shape);
+            this.Material = material;
+
         }
 
         //TODO validations 
@@ -49,7 +51,7 @@
                 this.left = value;
             }
         }
-        
+
         public bool[,] Shape
         {
             get
@@ -61,6 +63,8 @@
                 this.shape = value;
             }
         }
+
+        public MaterialType Material { get; set; }
 
         public GlobalConstant Density { get; private set; }
 
@@ -188,7 +192,7 @@
                     this.Left = 4;
                     result = new bool[Width, Height];
                     result[0, 0] = true;
-                
+
                     this.Shape = result;
                     break;
 
@@ -218,12 +222,12 @@
                     this.Left = 4;
                     result = new bool[Width, Height];
                     result[0, 0] = true;
-                    result[0, 1] = false;   
+                    result[0, 1] = false;
                     result[1, 0] = true;
                     result[1, 1] = true;
                     result[2, 0] = true;
                     result[2, 1] = true;
-                   
+
                     this.Shape = result;
                     break;
 
@@ -417,7 +421,7 @@
                     this.left = 4;
                     result = new bool[Width, Height];
                     result[0, 0] = true;
-                    result[0, 1] = true; 
+                    result[0, 1] = true;
                     result[1, 0] = false;
                     result[1, 1] = true;
 
