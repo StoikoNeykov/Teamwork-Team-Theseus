@@ -10,7 +10,7 @@
     using OpenTK.Graphics.OpenGL;
     using System.Drawing;
 
-    class Spritebach
+   public class Spritebach
     {
         public static  void Drow(Texture2D texture, Vector2 position, Vector2 scale,Color color, Vector2 origin,RectangleF? sourceRec=null)
         {

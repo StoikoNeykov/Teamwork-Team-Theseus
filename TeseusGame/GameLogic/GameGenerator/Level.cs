@@ -15,7 +15,7 @@ namespace GameLogic.GameGenerator
         public int data;
 
     }
-    struct Level
+  public class Level
     {
         private Block[,] grid;
         private string fileName;
@@ -224,7 +224,7 @@ namespace GameLogic.GameGenerator
         Empty
     }
 
-    struct  Block
+    public struct  Block
     {
         private BlockType type;
         private int posX, posY;

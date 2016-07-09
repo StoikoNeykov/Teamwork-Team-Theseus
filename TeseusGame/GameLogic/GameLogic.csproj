@@ -77,7 +77,7 @@
     <Compile Include="GameGenerator\Level.cs" />
     <Compile Include="GameGenerator\Spritebach.cs" />
     <Compile Include="GameGenerator\Texture2D.cs" />
-    <Compile Include="GameGenerator\View.cs" />
+    <Compile Include="GameGenerator\ViewGame.cs" />
     <Compile Include="GlobalConstant.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICreator.cs" />
@@ -123,7 +123,9 @@
     <None Include="Content\diamand.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Content\diamand.png" />
+    <None Include="Content\diamand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Content\Ice_Block_NSMBDIY.png" />
     <Content Include="Content\KMA_CrashBlock.png" />
     <Content Include="Content\LevelOne.js" />

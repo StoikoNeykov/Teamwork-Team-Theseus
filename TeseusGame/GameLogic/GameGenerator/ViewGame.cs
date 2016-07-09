@@ -18,7 +18,7 @@
         CubicInOut,
         QuarticInOut
     }
-    class View
+  public class ViewGame
     {
         private Vector2 positionGoTo, positionFrom;
         private TweenType tweentype;
@@ -65,12 +65,12 @@
         }
 
 
-        public View(Vector2 startPosition, double startZoom = 1.0, double startRotation = 0.0)
+        public ViewGame(Vector2 startPosition, double startZoom = 1.0, double startRotation = 0.0)
         {
             this.position = startPosition;
             this.rotation = startRotation;
             this.zoom = startZoom;
-
+           
         }
         public void Update()
         {
@@ -145,7 +145,7 @@
             transform = Matrix4.Mult(transform, Matrix4.CreateTranslation(-position.X, -position.Y, 0));
             transform = Matrix4.Mult(transform, Matrix4.CreateRotationZ(-(float) rotation));
             transform = Matrix4.Mult(transform, Matrix4.CreateScale((float)zoom,(float) zoom, 1.0f));
-
+           
             GL.MultMatrix(ref transform);
         }
     }

@@ -14,7 +14,7 @@ namespace GameLogic.GameGenerator
     /// <summary>
     /// Implements keybort 
     /// </summary>
-    class Input
+   public class Input
     {
         private static List<Key> keyDown;
         private static List<Key> keyDownLast;

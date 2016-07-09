@@ -13,7 +13,7 @@ namespace GameLogic.GameGenerator
     using System.Drawing.Imaging;
     using OpenTK.Graphics.OpenGL;
 
-    class ContentPipe
+  public class ContentPipe
     {
         public static Texture2D LoadTexture(string path)
         {
