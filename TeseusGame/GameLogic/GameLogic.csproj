@@ -50,6 +50,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,7 +120,9 @@
     <Content Include="Content\Blocks-128.png" />
     <Content Include="Content\BlocksAngryBirds.png" />
     <Content Include="Content\Brick_Block.png" />
-    <Content Include="Content\diamand.jpg" />
+    <None Include="Content\diamand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Content\diamand.png" />
     <Content Include="Content\Ice_Block_NSMBDIY.png" />
     <Content Include="Content\KMA_CrashBlock.png" />

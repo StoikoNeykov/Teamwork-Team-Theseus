@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using GameLogic;
-
+using GameLogic.GameGenerator;
+using OpenTK;
 namespace TheseusGame
 {
      
@@ -9,7 +10,8 @@ namespace TheseusGame
     {
         public static void Main()
         {
-            TestTopScores();
+            GameTeseus window = new GameTeseus(640, 480);
+            window.Run();
         }
 
         private static void TestTopScores()

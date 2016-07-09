@@ -57,7 +57,8 @@ namespace TheseusMainGame
             var play = new Play();
             play.Tag = this;
             play.Show(this);
-            Hide();
+          
+
         }
     }
 }
