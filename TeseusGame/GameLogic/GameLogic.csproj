@@ -93,12 +93,19 @@
   <ItemGroup>
     <None Include="Content\LevelOne.json" />
     <None Include="Content\LevelOne.tmx" />
+    <None Include="Content\LevelOneNew.tmx" />
     <None Include="Content\OpenTK.Compatibility.dll.config" />
     <None Include="Content\OpenTK.dll.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\128Blocks.png" />
+    <Content Include="Content\Blocks-128.png" />
     <Content Include="Content\BlocksAngryBirds.png" />
+    <Content Include="Content\Brick_Block %281%29.png" />
+    <Content Include="Content\Brick_Block.png" />
+    <Content Include="Content\diamand.jpg" />
+    <Content Include="Content\diamand.png" />
+    <Content Include="Content\Ice_Block_NSMBDIY.png" />
     <Content Include="Content\KMA_CrashBlock.png" />
     <Content Include="Content\LevelOne.js" />
     <Content Include="Content\lolo3loloandlala.gif" />
