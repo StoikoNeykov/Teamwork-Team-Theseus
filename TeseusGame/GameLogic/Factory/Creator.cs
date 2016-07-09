@@ -21,12 +21,14 @@
             }
         }
 
-        public virtual IFigure CreateFigure(CreationType creation = CreationType.Figure, FigureFormsType shape = FigureFormsType.Zero)
+        public virtual IFigure CreateFigure(CreationType creation = CreationType.Figure,
+                                                FigureFormsType shape = FigureFormsType.Zero,
+                                                MaterialType material = MaterialType.Wood)
         {
             switch (creation)
             {
                 case CreationType.Figure:
-                    return new Figures(1, 1, 0, 0, shape);
+                    return new Figures(1, 1, 0, 0, shape, material);
                 default:
                     throw new WrongCreationException();
             }
@@ -47,7 +49,7 @@
 
         }
 
-        public IPlayer CreatePlayer(CreationType creation = CreationType.Player, FigureFormsType shape = FigureFormsType.Zero)
+        public virtual IPlayer CreatePlayer(CreationType creation = CreationType.Player, FigureFormsType shape = FigureFormsType.Zero)
         {
             switch (creation)
             {

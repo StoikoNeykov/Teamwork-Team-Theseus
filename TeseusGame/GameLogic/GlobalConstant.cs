@@ -28,5 +28,6 @@
         public const int Tops = 10;
 
         public const string WrongCreationError = "Cannot use that method for that creation!";
+        public const string WrongCommandError = "Wrong command  dude!";
     }
 }
