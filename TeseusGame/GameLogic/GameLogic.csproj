@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Map.cs" />
     <Compile Include="DataTransfer.cs" />
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="Enumerations\Commands.cs" />
@@ -139,6 +140,9 @@
     <Content Include="Content\Tetris.png" />
     <Content Include="Content\Tetris2.png" />
     <Content Include="Content\Tetris22.bmp" />
+    <None Include="Content\Tiles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Content\Wall.jpg" />
     <Content Include="Content\Wall2.png" />
   </ItemGroup>

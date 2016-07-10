@@ -40,7 +40,7 @@ namespace TeseusMainGame.UserControls
 
             //GL.Enable(EnableCap.Texture2D);
 
-            tileset = ContentPipe.LoadTexture("diamand.jpg");
+            tileset = ContentPipe.LoadTexture("Tiles.png");
             view = new ViewGame(Vector2.Zero, 2f, 0);
             level=new Level("../../../GameLogic/Content/LevelOneNew.json");
             //var mouse = Mouse.GetState();
@@ -98,15 +98,15 @@ namespace TeseusMainGame.UserControls
 
                             break;
                         case BlockType.StoneBlocks:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(1 * TILESIZE,2 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                         case BlockType.Paper:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(1 * TILESIZE, 1 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                         case BlockType.diamand:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(0 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                     }
@@ -152,19 +152,19 @@ namespace TeseusMainGame.UserControls
 
                             break;
                         case BlockType.StoneBlocks:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(1 * TILESIZE, 2 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                         case BlockType.Paper:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(1 * TILESIZE, 1 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                         case BlockType.diamand:
-                            source = new RectangleF(2 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
+                            source = new RectangleF(0 * TILESIZE, 0 * TILESIZE, TILESIZE, TILESIZE);
 
                             break;
                     }
-                    Spritebach.Drow(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE / TILESIZE), Color.Aquamarine, Vector2.Zero, source);
+                    Spritebach.Drow(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE / TILESIZE), Color.White, Vector2.Zero, source);
                 }
             }
             //Spritebach.Drow(texture, Vector2.Zero, new Vector2(0.2f, 0.2f), Color.DarkGreen, new Vector2(10, 50));
@@ -193,7 +193,7 @@ namespace TeseusMainGame.UserControls
                 Vector2 pos = new Vector2(e.X, e.Y) - new Vector2(this.Width, this.Height) / 2f;
                 pos = view.ToWorld(pos);
 
-                view.SetPosition(pos, TweenType.QuarticInOut, 1000);
+                view.SetPosition(pos, TweenType.QuarticInOut, 60);
 
             }
             glControl1.Invalidate();

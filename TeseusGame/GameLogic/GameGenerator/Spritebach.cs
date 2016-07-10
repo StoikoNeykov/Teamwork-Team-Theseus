@@ -40,11 +40,9 @@
                     GL.TexCoord2((sourceRec.Value.Left + verticis[i].X * sourceRec.Value.Width) / texture.Width,
                         (sourceRec.Value.Top + verticis[i].Y * sourceRec.Value.Height) / texture.Height);
                 }
-                GL.TexCoord2(verticis[i]);
+               // GL.TexCoord2(verticis[i]);
                 verticis[i].X *= sourceRec?.Width ?? texture.Width;
                 verticis[i].Y *= sourceRec?.Height ?? texture.Height;
-                ////verticis[i].X *= texture.Width;
-                ////verticis[i].Y *= texture.Height;
                 verticis[i] -= origin;
                 verticis[i] *= scale;
                 verticis[i] += position;

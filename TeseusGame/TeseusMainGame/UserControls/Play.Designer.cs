@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.glControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Play";
             this.Text = "Play";
             this.Load += new System.EventHandler(this.Play_Load);

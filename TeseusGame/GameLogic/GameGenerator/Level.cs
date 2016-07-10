@@ -1,7 +1,11 @@
-﻿using System.Data;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.Serialization;
 
 namespace GameLogic.GameGenerator
 {
@@ -58,31 +62,48 @@ namespace GameLogic.GameGenerator
                 return grid.GetLength(1);
             }
         }
-
+        public static T ParseJsonObject<T>(string json)
+            where T : class, new()
+        {
+            JObject jobject = JObject.Parse(json);
+            return JsonConvert.DeserializeObject<T>(jobject.ToString());
+        }
         public Level(string filePath)
         {
             try
             {
-                JObject obj=JObject.Parse(File.ReadAllText(filePath));
-                using (StreamReader file=new StreamReader(filePath))
+
+               // var jsreader = new JsonTextReader(new StringReader(filePath));
+               // var json = (JObject) new JsonSerializer().Deserialize(jsreader);
+
+             
+                //JObject obj=JObject.Parse(File.ReadAllText(filePath));
+                using (StreamReader file = new StreamReader(filePath))
                 {
                     var str = file.ReadToEnd();
-                    RootObject root = JsonConvert.DeserializeObject<RootObject>(str);
+                    JObject search=JObject.Parse(str);
+                    IList<JToken> result = search["layers"][0]["data"].Children().ToList();
+
+                    Map root = JsonConvert.DeserializeObject<Map>(str);
                     int width = root.Width;
                     int height = root.Height;
 
                     grid = new Block[width, height];
                     this.fileName = filePath;
                     playerStartPos = new Point(1, 1);
+                    IList<JToken> tileset = search["tilesets"].ToList();
 
-                    Layer layer = JsonConvert.DeserializeObject<Layer>(str);
-                    RootObject tiles = JsonConvert.DeserializeObject<RootObject>(str);
+                    Map myObj = JsonConvert.DeserializeObject<Map>(str);
 
+                    Layer lyer = JsonConvert.DeserializeObject<Layer>(str);
+               
+                     
 
                     int x = 0, y = 0;
-                    for (int i = 0; i < tiles.Tilesets.Count; i++)
+                    for (int i = 0; i < result.Count; i++)
                     {
-                        int gid = tiles.Tilesets[i].Firstgid;
+                        int gid = int.Parse(result[i].ToString());
+
 
                         switch (gid)
                         {
@@ -104,69 +125,43 @@ namespace GameLogic.GameGenerator
                             case 5:
                                 grid[x, y] = new Block(BlockType.Paper, x, y);
                                 break;
-
                         }
                         x++;
-                        if (x>=width)
+                        if (x >= width)
                         {
                             x = 0;
                             y++;
                         }
-
-                       // RootObject objects = JsonConvert.DeserializeObject<RootObject>(str);
-
-                        //DataSet dataset = JsonConvert.DeserializeObject<DataSet>(str);
-
-                        //DataTable table = dataset.Tables["objects"];
-
-                        //foreach (DataRow row in table.Rows)
-                        //{
-                        //    int xPos = int.Parse(row["x"].ToString());
-                        //    int yPos = int.Parse(row["y"].ToString());
-
-                        //    switch (row["name"].ToString())
-                        //    {
-                        //        case "TeseusStart":
-                        //            this.playerStartPos = new Point((int) (xPos/128), (int) yPos/128);
-                        //            break;
-                        //        default:
-                        //            break;
-                        //    }
-                        //}
-
                     }
-
                 }
-
-
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
 
-                int width = 20;
-                int height = 20;
-                grid = new Block[width, height];
-                fileName = "none";
+                //int width = 20;
+                //int height = 20;
+                //grid = new Block[width, height];
+                //fileName = "none";
 
-                playerStartPos = new Point(1, 1);
+                //playerStartPos = new Point(1, 1);
 
-                for (int x = 0; x < width; x++)
-                {
-                    for (int y = 0; y < height; y++)
-                    {
-                        if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
-                        {
-                            grid[x, y] = new Block(BlockType.Brick_Block, x, y);
+                //for (int x = 0; x < width; x++)
+                //{
+                //    for (int y = 0; y < height; y++)
+                //    {
+                //        if (x == 0 || y == 0 || x == width - 1 || y == height - 1)
+                //        {
+                //            grid[x, y] = new Block(BlockType.Brick_Block, x, y);
 
-                        }
-                        else
-                        {
-                            grid[x, y] = new Block(BlockType.Empty, x, y);
+                //        }
+                //        else
+                //        {
+                //            grid[x, y] = new Block(BlockType.Empty, x, y);
 
-                        }
-                    }
-                }
+                //        }
+                //    }
+                //}
             }
         }
 
