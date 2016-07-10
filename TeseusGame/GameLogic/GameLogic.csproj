@@ -97,6 +97,7 @@
     <Compile Include="Models\SpecialField.cs" />
     <Compile Include="Models\WallBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="TopScores.cs" />
   </ItemGroup>
   <ItemGroup>
