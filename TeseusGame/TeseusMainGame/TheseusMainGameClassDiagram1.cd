@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TheseusMainGame.UserControls.Credits" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAABQAAA=</HashCode>
+      <FileName>UserControls\Credits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheseusMainGame.UserControls.HowToPlay" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAAACAABACAAAAAAAAAAAAAABQAAA=</HashCode>
+      <FileName>UserControls\HowToPlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheseusMainGame.UserControls.TopScores" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAGAAAAAAAACAAAACAAAAAAAAAAgIAAAAAAA=</HashCode>
+      <FileName>UserControls\TopScores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeseusMainGame.UserControls.Play" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABBAAGAACAAAFABIACAACCCQAEIAgAAIQAAgAAQAAA=</HashCode>
+      <FileName>UserControls\Play.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheseusMainGame.Setup" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Setup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheseusMainGame.TheseusMainForm" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEA4AAAAAHAIAABAAAA=</HashCode>
+      <FileName>TheseusMainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

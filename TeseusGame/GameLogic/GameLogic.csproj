@@ -101,6 +101,7 @@
     <Compile Include="TopScores.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="GameLogicClassDiagram1.cd" />
     <None Include="Content\LevelOne.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

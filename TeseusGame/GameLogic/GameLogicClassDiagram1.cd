@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameLogic.Engine.Engine" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAQAAAAAAQAAAAEUAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Exceptions.InvalidSizeException" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidFieldSizeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Exceptions.WrongCreationException" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\WrongCreationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Extensions.IEnumerableExtensions" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\IEnumerableExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Factory.Creator" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAgAAAAAAAAAAAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\Creator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Factory.LevelMaker" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAQAAAAAAIAAACAAAAAAAAAAAAAACAAAEAAA=</HashCode>
+      <FileName>Factory\LevelMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.GameTeseus" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgAIAAAAAAAAAAAAAACAAAAAiAAAQAAAAAAAAA=</HashCode>
+      <FileName>GameGenerator\GameTeseus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.Input" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAgQAAAIAAAAAAFAAAEAwQAABAAAAGAAA=</HashCode>
+      <FileName>GameGenerator\Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.Item" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GameGenerator\Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.Level" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIAAAAACAAAAEAAACAAAAAAAEAAAABAAAA=</HashCode>
+      <FileName>GameGenerator\Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.Spritebach" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameGenerator\Spritebach.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GameGenerator.ViewGame" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAACAASAAQIEAACCBIBAAAAIAQgAAAAAAAAAAABA=</HashCode>
+      <FileName>GameGenerator\ViewGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Models.Block" Collapsed="true">
+    <Position X="1.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAAAAAAAAAAEAAAAgBAAgIAAAADAAAAAgABAA=</HashCode>
+      <FileName>Models\Block.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.End" Collapsed="true">
+    <Position X="7.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAABAA=</HashCode>
+      <FileName>Models\End.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.Field" Collapsed="true">
+    <Position X="10.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Field.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.Figures" Collapsed="true">
+    <Position X="2.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Figure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.GameElement" Collapsed="true">
+    <Position X="6" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAQAQAAAAEAAAAAAAAAAAAAAAAAAEBA=</HashCode>
+      <FileName>Models\GameElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.Player" Collapsed="true">
+    <Position X="5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAAAAAAAAAAAAAAAAAAAAIAAAACQAAAAAABAA=</HashCode>
+      <FileName>Models\Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.PlayGround" Collapsed="true">
+    <Position X="9.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PlayGround.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.SpecialField" Collapsed="true">
+    <Position X="11.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SpecialField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.Models.WallBlock" Collapsed="true">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WallBlock.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameLogic.DataTransfer" Collapsed="true">
+    <Position X="14.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>DataTransfer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.GlobalConstant" Collapsed="true">
+    <Position X="16" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAJQgEAEAggAAAIABAAAAAEBAQAAEAARAAAAAIACBAA=</HashCode>
+      <FileName>GlobalConstant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.RootObject" Collapsed="true">
+    <Position X="14.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAECAABQEAAAAAAAAAAEBAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>LevelJsonParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Layer" Collapsed="true">
+    <Position X="17.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAAAAAAAAAAAAEQAAAAAABAIAQAAAAAAYAA=</HashCode>
+      <FileName>LevelJsonParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Tileset" Collapsed="true">
+    <Position X="17.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQCAAAAUABAAAAAAAAAQAAAAgIhEAAAAAAAgAAAA=</HashCode>
+      <FileName>LevelJsonParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.Score" Collapsed="true">
+    <Position X="16" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAABAAAAAQAAACAAAAAA=</HashCode>
+      <FileName>Score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic.TopScores" Collapsed="true">
+    <Position X="14.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAEAAABAAAAAABAAAA=</HashCode>
+      <FileName>TopScores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GameLogic.GameGenerator.Block" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIAAEFABAAAAAICACABAAAAARIAwAAAYAA=</HashCode>
+      <FileName>GameGenerator\Level.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GameLogic.GameGenerator.Texture2D" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAgAQAQAAAAEAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>GameGenerator\Texture2D.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="GameLogic.Interfaces.IBlock" Collapsed="true">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBlock.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.ICreator" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAgAAAAAAAAAAAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.IEngine" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.IField" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.IFigure" Collapsed="true">
+    <Position X="12.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFigure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.IGameElement" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGameElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameLogic.Interfaces.IPlayer" Collapsed="true">
+    <Position X="12.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GameLogic.Enumerations.Commands" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAEAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\Commands.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.Enumerations.CreationType" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAAAAAAAAAAAAABAAAAAAAAAEAQAAAAAAQAAAAA=</HashCode>
+      <FileName>Enumerations\CreationType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.Enumerations.Directions" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Enumerations\Directions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.Enumerations.MaterialType" Collapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAAAAEAAAgwAAAIAAAAAAAAAAAAIEAAAARAAgAA=</HashCode>
+      <FileName>Enumerations\MaterialType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.Enumerations.FigureFormsType" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAECmAQAGAEI=</HashCode>
+      <FileName>Enumerations\FigureFormsType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.GameGenerator.BlockType" Collapsed="true">
+    <Position X="4.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAEAAAAACAAIAAAAAAAACAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GameGenerator\Level.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameLogic.GameGenerator.TweenType" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>GameGenerator\ViewGame.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
