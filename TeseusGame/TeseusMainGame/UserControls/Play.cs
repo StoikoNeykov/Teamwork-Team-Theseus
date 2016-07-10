@@ -41,7 +41,7 @@ namespace TeseusMainGame.UserControls
             //GL.Enable(EnableCap.Texture2D);
 
             tileset = ContentPipe.LoadTexture("Tiles.png");
-            view = new ViewGame(Vector2.Zero, 2f, 0);
+            view = new ViewGame(Vector2.Zero, 0.5f, 0);
             level=new Level("../../../GameLogic/Content/LevelOneNew.json");
             //var mouse = Mouse.GetState();
            // Input.Initialize(this);
