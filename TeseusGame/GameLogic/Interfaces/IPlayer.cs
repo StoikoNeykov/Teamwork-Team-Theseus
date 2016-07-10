@@ -2,7 +2,7 @@
 {
     using Enumerations;
 
-    public interface IPlayer : IBlock, IGameElement
+    public interface IPlayer : IBlock
     {
         Directions ViewDirection { get; set; }
     }

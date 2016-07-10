@@ -2,8 +2,10 @@
 {
     public enum MaterialType
     {
-        Solid,
+        PlayerMaterial,
+        EndMaterial,
         Empty,
+        Solid,
         Steel,
         Paper,
         WaxPaper,

@@ -77,8 +77,8 @@
             Random rng = new Random();
 
             var randomForm = (FigureFormsType)forms.GetValue(rng.Next(forms.Length));
-            //avoid 0 and 1 coz special values (if i understand right team plan :D)
-            var randomMat = (MaterialType)mats.GetValue(rng.Next(mats.Length - 2) + 2);
+            //avoid 0, 1 and 2 coz special values (if i understand right team plan :D)
+            var randomMat = (MaterialType)mats.GetValue(rng.Next(mats.Length - 3) + 3);
             var result = creator.CreateFigure(CreationType.Figure, randomForm, randomMat);
             return result;
         }
