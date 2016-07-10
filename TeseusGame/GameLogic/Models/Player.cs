@@ -15,7 +15,7 @@
             : base(1, 1)
         {
             this.ViewDirection = Directions.Up;
-            this.Material = MaterialType.Solid;
+            this.Material = MaterialType.PlayerMaterial;
         }
 
         public MaterialType Material { get; set; }

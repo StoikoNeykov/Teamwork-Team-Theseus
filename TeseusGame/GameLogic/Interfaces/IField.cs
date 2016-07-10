@@ -5,6 +5,8 @@
     /// </summary>
     public interface IField : IGameElement
     {
-        IGameElement[,] Matrix { get; }
+        IBlock[,] Matrix { get; }
+
+        int[,] GetFlattenMatrix();
     }
 }

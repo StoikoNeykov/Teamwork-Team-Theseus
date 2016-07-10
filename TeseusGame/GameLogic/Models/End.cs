@@ -14,7 +14,7 @@
         public End()
             : base(1, 1)
         {
-            this.Material = MaterialType.Empty;
+            this.Material = MaterialType.EndMaterial;
         }
 
         public MaterialType Material { get; set; }
